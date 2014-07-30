@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Fnord]]></title>
+  <link href="http://fnord.phfactor.net//atom.xml" rel="self"/>
+  <link href="http://fnord.phfactor.net//"/>
+  <updated>2014-07-30T14:06:03-07:00</updated>
+  <id>http://fnord.phfactor.net//</id>
+  <author>
+    <name><![CDATA[]]></name>
+    <email><![CDATA[pfh@phfactor.net]]></email>
+  </author>
+  <generator uri="http://www.statiked.com/">Statiked</generator>
+
+  
+  
+</feed>
