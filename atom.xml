@@ -15,7 +15,7 @@
   <entry>
     <title type="html"><![CDATA[Third try with Statiked]]></title>
     <link href="http://fnord.phfactor.net//2014/07/30/Third-try-with-Statiked.html"/>
-    <updated>2014-07-30T21:06:39+00:00</updated>
+    <updated>2014-07-30T21:12:12+00:00</updated>
     <id>http://fnord.phfactor.net//2014/07/30/Third-try-with-Statiked.html</id>
     <content type="html"><![CDATA[<p>Just had a nice debug call with the author of Statiked... gotta love indie developers! Did a screenshare
 and debugged the problem I was having. Turns out that the GitHub API he uses can't handle the two-factor
