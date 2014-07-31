@@ -14,45 +14,110 @@
 
         <link rel="stylesheet" href="http://fnord.phfactor.net/theme/css/normalize.css">
         <link rel="stylesheet" href="http://fnord.phfactor.net/theme/css/main.css">
-        <link rel="shortcut icon" href="http://fnord.phfactor.net/theme/favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="http://fnord.phfactor.net/theme/css/style.css">
         <script src="http://fnord.phfactor.net/theme/js/vendor/modernizr-2.6.2.min.js"></script>
-        <script src="http://fnord.phfactor.net/theme/js/jquery.min.js"></script>
-
+        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+       <link rel="shortcut icon" href="http://fnord.phfactor.net/theme/favicon.ico" type="image/x-icon"/>
        <style>
-        a
+        nav a
         {
-          color: #08088A;
-          text-decoration: none;
+            text-decoration: none;
+            color: white;
         }
-        #accordian li {
-          list-style-type: none;
+        body
+        {
+            z-index: 0;
+        }
+        nav 
+        {
+            z-index: 2;
+            text-align: left;
         }
 
-        #accordian ul ul {
-          display: none;
+        nav ul ul 
+        {
+            display: none;
+            z-index: 2;
         }
-       </style>
 
-       <script>
-       $(document).ready(function(){
-          $("#accordian span").click(function()
-          {
-            $("#accordian ul ul").slideUp();
-            $("#accordian span").attr('class', 'icon-right-dir');
+        nav ul li:hover > ul 
+        {
+            display: block;
+        }
 
-            if(!$(this).next().is(":visible"))
-            {
-              $(this).next().slideDown();
-              $(this).attr('class','icon-down-dir');
+        nav ul 
+        {
+            list-style: none;
+            margin: 0px 0px 0px 0px;
+            position: relative;
+            z-index: 2;
+            margin-left: 1px;
+            margin-top: 1px;
+        }
     
-            }
-            else
-            {
-              $(this).attr('class','icon-right-dir');
-            }
-          })
-        })
-       </script>
+        nav ul:after 
+        {
+            content: ""; clear: both; display: block;
+        }
+
+        nav ul li 
+        {
+            float: left;
+            z-index: 2;
+        }
+        
+        nav ul li:hover 
+        {
+            background: brown;
+            background: linear-gradient(top, rgb(85, 43, 0) 0%, rgb(85, 43, 0) 40%);
+            background: -moz-linear-gradient(top, rgb(85, 43, 0) 0%, rgb(85, 43, 0) 40%);
+            background: -webkit-linear-gradient(top, rgb(85, 43, 0) 0%,rgb(85, 43, 0) 40%);
+        }
+            
+        nav ul li:hover a 
+        {
+            color: #fff;
+        }
+        
+        nav ul li a 
+        {
+            display: block; padding: 15px 40px;
+            color: #757575; text-decoration: none;
+        }
+            
+        nav ul ul 
+        {
+            background: rgb(85, 43, 0); 
+            border-radius: 0px; padding: 0;
+            position: absolute; top: 100%;
+            z-index: 2;
+        }
+        nav ul ul li 
+        {
+            float: none; 
+            border-top: 1px solid #6b727c;
+            border-bottom: 1px solid rgb(85, 43, 0); position: relative;
+            z-index: 2;
+        }
+        nav ul ul li a 
+        {
+            color: #fff;
+            z-index: 2;
+        }   
+        nav ul ul li a:hover 
+        {
+            background: #4b545f;
+            z-index: 2;
+        }
+        
+        nav ul ul ul 
+        {
+            position: absolute; 
+            left: 100%;
+            top:0;
+            z-index: 2;
+        }
+        </style>
 
     </head>
     <body>
@@ -60,113 +125,118 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <link rel="stylesheet" href="css/fontello-ie7.css">
         <![endif]-->
-        
+      
     <header class="clearfix">
         <section class="container">
-        <a href="">
-          <div width="256" height="94">
-            <h2> Fnord </h2>
-            <h4> Half duplex </h4>
-          </div>
-        </a>
         <nav>
-        <ul>
-        <li><a href="http://fnord.phfactor.net/index.html"> <i class="icon-home-1"></i></a></li>
-        <li><a href="http://fnord.phfactor.net/about.html"><i class="icon-info-circled"></i></a></li>
-        <li><a href="http://fnord.phfactor.net/atom.xml"><i class="icon-rss"></i></a></li>
-        </ul>
+            <ul>
+                <li><a href="http://fnord.phfactor.net/about.html">About  </a>  </li>
+                <li><a href="">Recent + </a> 
+                    <ul>
+                        <li><a href="http://fnord.phfactor.net/2014/07/30/Second-post.html">Second post</a> </li>
+<li><a href="http://fnord.phfactor.net/2014/07/30/Third-try-with-Statiked.html">Third try with Statiked</a> </li>
+
+                    </ul>
+                </li>
+                <li><a href="">Archives + </a> 
+                    <ul>
+                    
+                    
+                            
+                            <li><a href="#">2014</a>
+                            <ul>
+                            <li><a href="http://fnord.phfactor.net/2014/07/30/Second-post.html">Second post</a></li>
+                        
+<li><a href="http://fnord.phfactor.net/2014/07/30/Third-try-with-Statiked.html">Third try with Statiked</a></li>
+                        </ul>
+                            </li>
+
+                    </ul>
+                </li>
+                <li><a href="">Categories +</a> 
+                    <ul>
+                        <li><a href="#">statiked</a>
+                                    <ul>
+                                        <li><a href="http://fnord.phfactor.net/2014/07/30/Second-post.html">Second post</a></li>
+                                
+<li><a href="http://fnord.phfactor.net/2014/07/30/Third-try-with-Statiked.html">Third try with Statiked</a></li>
+                                </ul>
+                                    </li>
+
+
+                    </ul>
+                </li>
+                <div class="feed"><a href="http://fnord.phfactor.net/atom.xml"><i class="icon-rss"></a></i></div>
+            </ul>
         </nav>
+        
+        <div id="logobox" class="content-box">
+            
+            <div class="logo"><img src="http://fnord.phfactor.net/theme/img/vintage-logo.png" alt=""></div>
+            <a href = "http://fnord.phfactor.net"><div class="vintage-text">
+                <h1><strong>Fnord</strong></h1>
+                <p>Half duplex</p>
+            </div></a>
+        </div>
       </section>
     
         </header>
         
+        
+
 <div class="main clearfix">
-	<section class="container" id="posts">
-		<div class="left-container">
-	  		<article class="list clearfix">
-		  		<h3>Second post</h3>
-		 		<span class="by">Posted on 30 Jul 2014.</span>
-				<p><p>Now I've added the CNAME file, hopefully it'll still work...</p>
+        <section id="posts" class="container"> 
+            <article class="content-box">
+                <div class="date">30<span>Jul</span></div>
+                <h1>Second post</h1>
+                <p><p>Now I've added the CNAME file, hopefully it'll still work...</p>
 </p>
-		
-				<div class="socialbar">
-					<div class="clearfix"></div>
-					<ul>
-						<li>
-						<i class="icon-tag-1"></i>
-						  <span>statiked</span>
-
-						</li>
-						<li><i class="icon-comment"></i> 
-							<span> 
-								
+                <div class="socialbar">
+                    <div class="clearfix"></div>
+                    <ul>
+                        <li><i class="icon-tag-1"></i>
+                          <span>statiked</span>
+</li>
+                        <li><i class="icon-comment"></i> <span> 
                                 
-                                 
-                            </span>
-                        </li>
-						<li class="push-right">
-							<a href="https://twitter.com/intent/tweet?text=http://fnord.phfactor.net/2014/07/30/Second-post.html" onclick="javascript:window.open(this.href,
+                                 </span></li>
+                        <li class="push-right">
+                            <a href="https://twitter.com/intent/tweet?text=http://fnord.phfactor.net/2014/07/30/Second-post.html" onclick="javascript:window.open(this.href,
                                 '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="icon-twitter-circled"></i></a>
-							
-							
-						</li>
-					</ul>
-				</div>   
-			 
-	  		</article>
-		</div>
-			
-
-<div class="right-container">
-          <div class="right-col">
-          <h3>ABOUT</h3>
-          <p>Hello this is my first Statiked Blog. To change the contents of this short introduction, change short_introduction.html file in _includes</p>
-          </div>
-          
-          <div class="right-col">
-          <h3>ARCHIVES</h3>
-          <div id="accordian">
-          <ul>
-            
-            
+                            
+                            
+                        </li>
+                    </ul>
+                </div>
                 
-                <li>
-                  <span class="icon-right-dir"><i>2014</i></span>
-                <ul>
-                <li><a href="http://fnord.phfactor.net/2014/07/30/Second-post.html">Second post</a></li>
-<li><a href="http://fnord.phfactor.net/2014/07/30/Third-try-with-Statiked.html">Third try with Statiked</a></li>
-
-          </ul>
-         </div>
-          </div>
-          
-     <div class="right-col">
-          <h3>CATEGORIES</h3>
-          <div id="accordian">
-            <ul>
-            <li>
-                    <span class="icon-right-dir"><i>statiked</i></span>
-                  <ul>
-                  <li><a href="http://fnord.phfactor.net/2014/07/30/Second-post.html">Second post</a></li>
-                
-<li><a href="http://fnord.phfactor.net/2014/07/30/Third-try-with-Statiked.html">Third try with Statiked</a></li>
-                </ul>
-                  </li>
-
-
-          </ul>
-         
-          </div>     
-          
-        </div>
-        
+             
+             
+            </article>
         </section>
+</div>
+
+        <footer>
+        <div class="container" id="footer">
+        <div class="col-180">
+        <h3>ABOUT</h3>
+        Paul Hubbard here, pleased you dropped by to my personal site. Hope you like it.
+
         </div>
-        
-        <footer class="clearfix">
-        <div class="container">
-        <div class="left-container"><a href="#">Snowhite</a> | <a href="#">All Rights Reserved.</a></div>
-         <div class="right-container">Blog theme by : <a href="http://statiked.com" target ="_blank">Statiked</a></div>
+        <div class="col-180"><h3>POPULAR POST</h3>
+        <ul class="list">
+        <li>
+        <a href="http://fnord.phfactor.net/2014/07/30/Second-post.html">Second post</a>
+        </li>
+<li>
+        <a href="http://fnord.phfactor.net/2014/07/30/Third-try-with-Statiked.html">Third try with Statiked</a>
+        </li>
+
+        </ul>
+        </div>
+        </div>
+       <div class="sub-footer container">
+        <div class="left-container"><a href="#">THE VINTAGE BLOG  </a> | <a href="#">All Rights Reserved.</a></div>
+         <div class="right-container">Blog theme by : <a href="http://statiked.com" target = "_blank">Statiked</a></div>
         </div>
         </footer>
 
@@ -176,8 +246,24 @@
 
         <script src="http://fnord.phfactor.net/theme/js/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="http://fnord.phfactor.net/theme/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script defer src="http://fnord.phfactor.net/theme/js/jquery.flexslider-min.js"></script>
+        
         <script src="http://fnord.phfactor.net/theme/js/plugins.js"></script>
         <script src="http://fnord.phfactor.net/theme/js/main.js"></script>
+          <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -193,7 +279,7 @@
     })();
   </script>
         
-
+        
           <script type="text/javascript">
     (function() {
       var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
