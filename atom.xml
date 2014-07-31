@@ -15,7 +15,7 @@
   <entry>
     <title type="html"><![CDATA[Welcome to Fnord, Statiked version]]></title>
     <link href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html"/>
-    <updated>2014-07-31T17:12:10+00:00</updated>
+    <updated>2014-07-31T17:16:11+00:00</updated>
     <id>http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html</id>
     <content type="html"><![CDATA[<p>The blog platform and server are now both changed - I've been using Octopress and self-hosting, but the
 Rake-based workflow was painful and slow, and while I don't regret funding the Ghost project they still haven't had
