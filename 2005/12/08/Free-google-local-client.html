@@ -2,472 +2,429 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta name="robots" content="nofollow" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Fnord</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fnord</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="http://fnord.phfactor.net/theme/css/normalize.css">
-    <link rel="stylesheet" href="http://fnord.phfactor.net/theme/css/main.css">
-    <script src="http://fnord.phfactor.net/theme/js/vendor/modernizr-2.6.2.min.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" href="http://fnord.phfactor.net/theme/favicon.ico" type="image/x-icon"/>
-</head>
-<body>
-    <!--[if lt IE 7]>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="http://fnord.phfactor.net/theme/css/normalize.css">
+        <link rel="stylesheet" href="http://fnord.phfactor.net/theme/css/main.css">
+        <link rel="shortcut icon" href="http://fnord.phfactor.net/theme/favicon.ico" type="image/x-icon"/>
+        <script src="http://fnord.phfactor.net/theme/js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="http://fnord.phfactor.net/theme/js/jquery.min.js"></script>
+
+       <style>
+        a
+        {
+          color: #08088A;
+          text-decoration: none;
+        }
+        #accordian li {
+          list-style-type: none;
+        }
+
+        #accordian ul ul {
+          display: none;
+        }
+       </style>
+
+       <script>
+       $(document).ready(function(){
+          $("#accordian span").click(function()
+          {
+            $("#accordian ul ul").slideUp();
+            $("#accordian span").attr('class', 'icon-right-dir');
+
+            if(!$(this).next().is(":visible"))
+            {
+              $(this).next().slideDown();
+              $(this).attr('class','icon-down-dir');
+    
+            }
+            else
+            {
+              $(this).attr('class','icon-right-dir');
+            }
+          })
+        })
+       </script>
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <link rel="stylesheet" href="css/fontello-ie7.css">
         <![endif]-->
-
-    <header>
-        <div class="container clearfix">
-            <ul id="example2" class="dropdown-menu">
-                <li><a href="#">Recent<span><img src="http://fnord.phfactor.net/theme/img/down.png" /></span></a>
-                    <ul>
-                        <li><a href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html">Welcome to Fnord, Statiked version</a> </li>
-<li><a href="http://fnord.phfactor.net/2005/12/23/Paul-tries-pocketwatches.html">Paul tries pocketwatches</a> </li>
-<li><a href="http://fnord.phfactor.net/2005/12/21/Putin-wears-Philippe-Bush-wears-timex.html">Putin wears Philippe, Bush wears timex</a> </li>
-
-
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Archives <span>
-                        <img src="http://fnord.phfactor.net/theme/img/down.png" /></span></a>
-                        <ul>
-                    
-                    
-                            
-                            <li><a href="#">2014</a>
-                            <ul>
-                            <li><a href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html">Welcome to Fnord, Statiked version</a></li>
-                        
-</ul>
-                                </li>
-                            
-                            <li><a href="#">2005</a>
-                            <ul>
-                            <li><a href="http://fnord.phfactor.net/2005/12/23/Paul-tries-pocketwatches.html">Paul tries pocketwatches</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/12/21/Putin-wears-Philippe-Bush-wears-timex.html">Putin wears Philippe, Bush wears timex</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/12/16/The-Value-of-Time.html">The Value of Time</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/12/11/Client-mode-on-Linksys-WRT54GS.html">Client mode on Linksys WRT54GS</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/12/08/Free-google-local-client.html">Free google local client.</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/12/06/What-is-it-with-men-and-their-watches.html">What is it with men and their watches?</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/12/03/Watches-for-flying.html">Watches for flying</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/12/03/Breitling-and-analog-digital.html">Breitling and analog-digital</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/12/03/Added-Google-analytics-to-the-site.html">Added Google analytics to the site</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/30/Blackberry-categories-blow-chunks.html">Blackberry categories blow chunks.</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/30/Apple-broadband-tuner.html">Apple broadband tuner</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/29/A-complete-catalog-of-all-the-Seiko-divers.html">A complete catalog of all the Seiko divers</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/27/How-a-watch-works-film-from-Hamilton-in-1949.html">How a watch works - film from Hamilton in 1949</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/25/Test-post-for-email-notification.html">Test post for email notification</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/25/I-really-want-a-silent-PC-so-I-can-run-OpenBSD-and-pf-again.html">I really want a silent PC so I can run OpenBSD and pf again</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/25/SRV-records-for-Asterisk.html">SRV records for Asterisk</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/23/Email-subscriptions-now-possible.html">Email subscriptions now possible.</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/15/Opera-Mini-update.html">Opera Mini update</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/15/Nice-two-page-list-of-OSS-mac-software.html">Nice two-page list of OSS mac software</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/15/Excellent-new-Opera-Mini-for-blackberry.html">Excellent - new Opera Mini for blackberry</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/09/More-on-the-SpringDrive-movement.html">More on the SpringDrive movement</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/09/We-know-that-the-most-dangerous-human-trait-is-an-absence-of-self-doubt-and.html">We know that the most dangerous human trait is an absence of self-doubt, and</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/09/A-really-cool-quote.html">A really cool quote.</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/08/Aquamacs.html">Aquamacs!</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/08/When-your-telephone-knows-you-re-there.html">When your telephone knows you're there</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/06/Atomic-solar-analog-and-classy.html">Atomic, solar, analog and classy</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/06/Supercheap-skeletonized-automatic-watches.html">Supercheap skeletonized automatic watches.</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/11/02/Thermocompensated-quartz-movements.html">Thermocompensated quartz movements</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/10/30/Another-Marinemaster-600-review.html">Another Marinemaster 600 review</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/10/28/More-on-watch-madness-the-Seiko-SBDB001.html">More on watch madness - the Seiko SBDB001</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/10/28/Retrocomputing-and-mechanical-watches.html">Retrocomputing and mechanical watches</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/10/28/CaffeineFinder-updated-to-1-0-3.html">CaffeineFinder updated to 1.0.3</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/10/11/A-new-affectation-strikes-our-hero.html">A new affectation strikes our hero.</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/10/11/Moved-to-sunny-California-Trite-eh.html">Moved to sunny California. Trite, eh?</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/06/13/Gigabit-ethernet-what-you-need.html">Gigabit ethernet - what you need</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/06/13/Macintosh-stuff-notes-and-recommendations.html">Macintosh stuff - notes and recommendations</a></li>
-                        
-<li><a href="http://fnord.phfactor.net/2005/06/13/WordPress-creation.html">WordPress creation</a></li>
-                        </ul>
-                            </li>
-
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Categories <span>
-                        <img src="http://fnord.phfactor.net/theme/img/down.png" /></span></a>
-                        <ul>
-                        <li><a href="#">statiked</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html">Welcome to Fnord, Statiked version</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">Reviews</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/12/23/Paul-tries-pocketwatches.html">Paul tries pocketwatches</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/12/03/Breitling-and-analog-digital.html">Breitling and analog-digital</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/25/I-really-want-a-silent-PC-so-I-can-run-OpenBSD-and-pf-again.html">I really want a silent PC so I can run OpenBSD and pf again</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/09/More-on-the-SpringDrive-movement.html">More on the SpringDrive movement</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/06/Atomic-solar-analog-and-classy.html">Atomic, solar, analog and classy</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/06/Supercheap-skeletonized-automatic-watches.html">Supercheap skeletonized automatic watches.</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/10/28/More-on-watch-madness-the-Seiko-SBDB001.html">More on watch madness - the Seiko SBDB001</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/10/28/Retrocomputing-and-mechanical-watches.html">Retrocomputing and mechanical watches</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/10/11/A-new-affectation-strikes-our-hero.html">A new affectation strikes our hero.</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/06/13/Macintosh-stuff-notes-and-recommendations.html">Macintosh stuff - notes and recommendations</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">Watches</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/12/23/Paul-tries-pocketwatches.html">Paul tries pocketwatches</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/12/21/Putin-wears-Philippe-Bush-wears-timex.html">Putin wears Philippe, Bush wears timex</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/12/16/The-Value-of-Time.html">The Value of Time</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/12/06/What-is-it-with-men-and-their-watches.html">What is it with men and their watches?</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/12/03/Watches-for-flying.html">Watches for flying</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/12/03/Breitling-and-analog-digital.html">Breitling and analog-digital</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/29/A-complete-catalog-of-all-the-Seiko-divers.html">A complete catalog of all the Seiko divers</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/27/How-a-watch-works-film-from-Hamilton-in-1949.html">How a watch works - film from Hamilton in 1949</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/09/More-on-the-SpringDrive-movement.html">More on the SpringDrive movement</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/06/Atomic-solar-analog-and-classy.html">Atomic, solar, analog and classy</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/06/Supercheap-skeletonized-automatic-watches.html">Supercheap skeletonized automatic watches.</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/02/Thermocompensated-quartz-movements.html">Thermocompensated quartz movements</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/10/30/Another-Marinemaster-600-review.html">Another Marinemaster 600 review</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/10/28/More-on-watch-madness-the-Seiko-SBDB001.html">More on watch madness - the Seiko SBDB001</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/10/28/Retrocomputing-and-mechanical-watches.html">Retrocomputing and mechanical watches</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">News</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/12/21/Putin-wears-Philippe-Bush-wears-timex.html">Putin wears Philippe, Bush wears timex</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/12/03/Added-Google-analytics-to-the-site.html">Added Google analytics to the site</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/25/Test-post-for-email-notification.html">Test post for email notification</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/25/SRV-records-for-Asterisk.html">SRV records for Asterisk</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/23/Email-subscriptions-now-possible.html">Email subscriptions now possible.</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/08/When-your-telephone-knows-you-re-there.html">When your telephone knows you're there</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/10/28/CaffeineFinder-updated-to-1-0-3.html">CaffeineFinder updated to 1.0.3</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/10/11/Moved-to-sunny-California-Trite-eh.html">Moved to sunny California. Trite, eh?</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/06/13/WordPress-creation.html">WordPress creation</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">Audio</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/12/11/Client-mode-on-Linksys-WRT54GS.html">Client mode on Linksys WRT54GS</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">Music</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/12/11/Client-mode-on-Linksys-WRT54GS.html">Client mode on Linksys WRT54GS</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">Networking</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/12/11/Client-mode-on-Linksys-WRT54GS.html">Client mode on Linksys WRT54GS</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/30/Apple-broadband-tuner.html">Apple broadband tuner</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">Blackberry</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/12/08/Free-google-local-client.html">Free google local client.</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/30/Blackberry-categories-blow-chunks.html">Blackberry categories blow chunks.</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/15/Opera-Mini-update.html">Opera Mini update</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/15/Excellent-new-Opera-Mini-for-blackberry.html">Excellent - new Opera Mini for blackberry</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">Aviation</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/12/03/Watches-for-flying.html">Watches for flying</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/12/03/Breitling-and-analog-digital.html">Breitling and analog-digital</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">Essays</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/12/03/Watches-for-flying.html">Watches for flying</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/09/We-know-that-the-most-dangerous-human-trait-is-an-absence-of-self-doubt-and.html">We know that the most dangerous human trait is an absence of self-doubt, and</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/10/28/More-on-watch-madness-the-Seiko-SBDB001.html">More on watch madness - the Seiko SBDB001</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/10/28/Retrocomputing-and-mechanical-watches.html">Retrocomputing and mechanical watches</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">OSX</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/11/30/Apple-broadband-tuner.html">Apple broadband tuner</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/15/Nice-two-page-list-of-OSS-mac-software.html">Nice two-page list of OSS mac software</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/08/Aquamacs.html">Aquamacs!</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">Seiko</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/11/29/A-complete-catalog-of-all-the-Seiko-divers.html">A complete catalog of all the Seiko divers</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">VOIP</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/11/25/I-really-want-a-silent-PC-so-I-can-run-OpenBSD-and-pf-again.html">I really want a silent PC so I can run OpenBSD and pf again</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/25/SRV-records-for-Asterisk.html">SRV records for Asterisk</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/08/When-your-telephone-knows-you-re-there.html">When your telephone knows you're there</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">Wisdom</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/11/09/We-know-that-the-most-dangerous-human-trait-is-an-absence-of-self-doubt-and.html">We know that the most dangerous human trait is an absence of self-doubt, and</a></li>
-                                
-<li><a href="http://fnord.phfactor.net/2005/11/09/A-really-cool-quote.html">A really cool quote.</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">Blackbery</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/10/28/CaffeineFinder-updated-to-1-0-3.html">CaffeineFinder updated to 1.0.3</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">watches</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/10/11/A-new-affectation-strikes-our-hero.html">A new affectation strikes our hero.</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">Macintosh</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/06/13/Macintosh-stuff-notes-and-recommendations.html">Macintosh stuff - notes and recommendations</a></li>
-                                </ul>
-                                    </li>
-
-<li><a href="#">WordPress</a>
-                                    <ul>
-                                        <li><a href="http://fnord.phfactor.net/2005/06/13/WordPress-creation.html">WordPress creation</a></li>
-                                </ul>
-                                    </li>
-
-
-                        </ul>
-                </li>
-
-            </ul>
-        </div>
-    </header>
-    <div class="top">
-        <div class="container">
-            <a class="slidDown">
-                <!--<div class="blueArrow"></div>-->
-            </a>
-            <a class="rss" href="http://fnord.phfactor.net/atom.xml"></a>
-        </div>
-
-    </div>
-
-<div>
-        <section>
-            <div class="container">
-                <a href="http://fnord.phfactor.net/index.html">
-                <div class="timeline_banner">
-                    <h1>Fnord</h1></br><h3 style = "color:white">Half duplex nerd mutterings</h3>
-                </div>
-                </a>
-         
-            <div class="small_date">
-                <article class="date">
-                    8<span>Dec</span>
-
-                </article>
-            </div>
-            <div class="main">
-
-                <div class="min_inner clearfix">
-                    <h3>Free google local client.</h3>
-                    <article>
-
-                        <div>
-                            <p><a href="http://www.bblocal.com/">bbLocal</a> is a full client for Google Local.</p>
-<p>Seems good. OTA at mobile.bblocal.com. Trying it now!</p>
-
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-            <div class="main_bottom clearfix">
-                <article>
-                    <div class="social_media">
-                        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://fnord.phfactor.net/2005/12/08/Free-google-local-client.html" onclick="javascript:window.open(this.href,
-                            '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
-                        
-                        
-                    </div>
-                    <label class="comment">
-                        
-                                
-                                
-                                 </label>
-                    <label class="tag">
-                    Blackberry
-
-                    </label>
-                    
-             
-             
-                </article>
-            </div>
-</div>
-</section>
-</div>   
+        
+    <header class="clearfix">
+        <section class="container">
+        <a href="">
+          <div width="256" height="94">
+            <h2> Fnord </h2>
+            <h4> Half duplex nerd mutterings </h4>
+          </div>
+        </a>
+        <nav>
+        <ul>
+        <li><a href="http://fnord.phfactor.net/index.html"> <i class="icon-home-1"></i></a></li>
+        <li><a href="http://fnord.phfactor.net/about.html"><i class="icon-info-circled"></i></a></li>
+        <li><a href="http://fnord.phfactor.net/atom.xml"><i class="icon-rss"></i></a></li>
+        </ul>
+        </nav>
+      </section>
     
-    <footer>
-        <div class="container">
-            <div class="left">
-                <h3>ABOUT</h3>
-                <article class="list">
+        </header>
+        
+<div class="main clearfix">
+	<section class="container" id="posts">
+		<div class="left-container">
+	  		<article class="list clearfix">
+		  		<h3>Free google local client.</h3>
+		 		<span class="by">Posted on 08 Dec 2005.</span>
+				<p><p><a href="http://www.bblocal.com/">bbLocal</a> is a full client for Google Local.</p>
+<p>Seems good. OTA at mobile.bblocal.com. Trying it now!</p>
+</p>
+		
+				<div class="socialbar">
+					<div class="clearfix"></div>
+					<ul>
+						<li>
+						<i class="icon-tag-1"></i>
+						  <span>Blackberry</span>
 
-                    <figure class="clearfix">
-                        <img src="img/testing.png" alt="" />
-                    </figure>
-                    <div>
-                        Hello this is my first Statiked Blog. To change the contents of this short introduction, change short_introduction.html file in _includes
-                    </div>
-                </article>
-            </div>
-            <div class="right">
-                <h3>RECENT POSTS</h3>
-                <article>
-                    <div>
-                        <ul>
-                            <li><a href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html">Welcome to Fnord, Statiked version</a></li>
-<li><a href="http://fnord.phfactor.net/2005/12/23/Paul-tries-pocketwatches.html">Paul tries pocketwatches</a></li>
+						</li>
+						<li><i class="icon-comment"></i> 
+							<span> 
+								
+                                
+                                 
+                            </span>
+                        </li>
+						<li class="push-right">
+							<a href="https://twitter.com/intent/tweet?text=http://fnord.phfactor.net/2005/12/08/Free-google-local-client.html" onclick="javascript:window.open(this.href,
+                                '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="icon-twitter-circled"></i></a>
+							
+							
+						</li>
+					</ul>
+				</div>   
+			 
+	  		</article>
+		</div>
+			
+
+<div class="right-container">
+          <div class="right-col">
+          <h3>ABOUT</h3>
+          <p>Hello this is my first Statiked Blog. To change the contents of this short introduction, change short_introduction.html file in _includes</p>
+          </div>
+          
+          <div class="right-col">
+          <h3>ARCHIVES</h3>
+          <div id="accordian">
+          <ul>
+            
+            
+                
+                <li>
+                  <span class="icon-right-dir"><i>2014</i></span>
+                <ul>
+                <li><a href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html">Welcome to Fnord, Statiked version</a></li>
+</ul>
+                  </li>
+                
+                <li>
+                  <span class="icon-right-dir"><i>2005</i></span>
+                <ul>
+                <li><a href="http://fnord.phfactor.net/2005/12/23/Paul-tries-pocketwatches.html">Paul tries pocketwatches</a></li>
 <li><a href="http://fnord.phfactor.net/2005/12/21/Putin-wears-Philippe-Bush-wears-timex.html">Putin wears Philippe, Bush wears timex</a></li>
+<li><a href="http://fnord.phfactor.net/2005/12/16/The-Value-of-Time.html">The Value of Time</a></li>
+<li><a href="http://fnord.phfactor.net/2005/12/11/Client-mode-on-Linksys-WRT54GS.html">Client mode on Linksys WRT54GS</a></li>
+<li><a href="http://fnord.phfactor.net/2005/12/08/Free-google-local-client.html">Free google local client.</a></li>
+<li><a href="http://fnord.phfactor.net/2005/12/06/What-is-it-with-men-and-their-watches.html">What is it with men and their watches?</a></li>
+<li><a href="http://fnord.phfactor.net/2005/12/03/Watches-for-flying.html">Watches for flying</a></li>
+<li><a href="http://fnord.phfactor.net/2005/12/03/Breitling-and-analog-digital.html">Breitling and analog-digital</a></li>
+<li><a href="http://fnord.phfactor.net/2005/12/03/Added-Google-analytics-to-the-site.html">Added Google analytics to the site</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/30/Blackberry-categories-blow-chunks.html">Blackberry categories blow chunks.</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/30/Apple-broadband-tuner.html">Apple broadband tuner</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/29/A-complete-catalog-of-all-the-Seiko-divers.html">A complete catalog of all the Seiko divers</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/27/How-a-watch-works-film-from-Hamilton-in-1949.html">How a watch works - film from Hamilton in 1949</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/25/Test-post-for-email-notification.html">Test post for email notification</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/25/I-really-want-a-silent-PC-so-I-can-run-OpenBSD-and-pf-again.html">I really want a silent PC so I can run OpenBSD and pf again</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/25/SRV-records-for-Asterisk.html">SRV records for Asterisk</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/23/Email-subscriptions-now-possible.html">Email subscriptions now possible.</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/15/Opera-Mini-update.html">Opera Mini update</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/15/Nice-two-page-list-of-OSS-mac-software.html">Nice two-page list of OSS mac software</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/15/Excellent-new-Opera-Mini-for-blackberry.html">Excellent - new Opera Mini for blackberry</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/09/More-on-the-SpringDrive-movement.html">More on the SpringDrive movement</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/09/We-know-that-the-most-dangerous-human-trait-is-an-absence-of-self-doubt-and.html">We know that the most dangerous human trait is an absence of self-doubt, and</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/09/A-really-cool-quote.html">A really cool quote.</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/08/Aquamacs.html">Aquamacs!</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/08/When-your-telephone-knows-you-re-there.html">When your telephone knows you're there</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/06/Atomic-solar-analog-and-classy.html">Atomic, solar, analog and classy</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/06/Supercheap-skeletonized-automatic-watches.html">Supercheap skeletonized automatic watches.</a></li>
+<li><a href="http://fnord.phfactor.net/2005/11/02/Thermocompensated-quartz-movements.html">Thermocompensated quartz movements</a></li>
+<li><a href="http://fnord.phfactor.net/2005/10/30/Another-Marinemaster-600-review.html">Another Marinemaster 600 review</a></li>
+<li><a href="http://fnord.phfactor.net/2005/10/28/More-on-watch-madness-the-Seiko-SBDB001.html">More on watch madness - the Seiko SBDB001</a></li>
+<li><a href="http://fnord.phfactor.net/2005/10/28/Retrocomputing-and-mechanical-watches.html">Retrocomputing and mechanical watches</a></li>
+<li><a href="http://fnord.phfactor.net/2005/10/28/CaffeineFinder-updated-to-1-0-3.html">CaffeineFinder updated to 1.0.3</a></li>
+<li><a href="http://fnord.phfactor.net/2005/10/11/A-new-affectation-strikes-our-hero.html">A new affectation strikes our hero.</a></li>
+<li><a href="http://fnord.phfactor.net/2005/10/11/Moved-to-sunny-California-Trite-eh.html">Moved to sunny California. Trite, eh?</a></li>
+<li><a href="http://fnord.phfactor.net/2005/06/13/Gigabit-ethernet-what-you-need.html">Gigabit ethernet - what you need</a></li>
+<li><a href="http://fnord.phfactor.net/2005/06/13/Macintosh-stuff-notes-and-recommendations.html">Macintosh stuff - notes and recommendations</a></li>
+<li><a href="http://fnord.phfactor.net/2005/06/13/WordPress-creation.html">WordPress creation</a></li>
+
+          </ul>
+         </div>
+          </div>
+          
+     <div class="right-col">
+          <h3>CATEGORIES</h3>
+          <div id="accordian">
+            <ul>
+            <li>
+                    <span class="icon-right-dir"><i>statiked</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html">Welcome to Fnord, Statiked version</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>Reviews</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/12/23/Paul-tries-pocketwatches.html">Paul tries pocketwatches</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/12/03/Breitling-and-analog-digital.html">Breitling and analog-digital</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/25/I-really-want-a-silent-PC-so-I-can-run-OpenBSD-and-pf-again.html">I really want a silent PC so I can run OpenBSD and pf again</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/09/More-on-the-SpringDrive-movement.html">More on the SpringDrive movement</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/06/Atomic-solar-analog-and-classy.html">Atomic, solar, analog and classy</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/06/Supercheap-skeletonized-automatic-watches.html">Supercheap skeletonized automatic watches.</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/10/28/More-on-watch-madness-the-Seiko-SBDB001.html">More on watch madness - the Seiko SBDB001</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/10/28/Retrocomputing-and-mechanical-watches.html">Retrocomputing and mechanical watches</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/10/11/A-new-affectation-strikes-our-hero.html">A new affectation strikes our hero.</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/06/13/Macintosh-stuff-notes-and-recommendations.html">Macintosh stuff - notes and recommendations</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>Watches</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/12/23/Paul-tries-pocketwatches.html">Paul tries pocketwatches</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/12/21/Putin-wears-Philippe-Bush-wears-timex.html">Putin wears Philippe, Bush wears timex</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/12/16/The-Value-of-Time.html">The Value of Time</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/12/06/What-is-it-with-men-and-their-watches.html">What is it with men and their watches?</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/12/03/Watches-for-flying.html">Watches for flying</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/12/03/Breitling-and-analog-digital.html">Breitling and analog-digital</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/29/A-complete-catalog-of-all-the-Seiko-divers.html">A complete catalog of all the Seiko divers</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/27/How-a-watch-works-film-from-Hamilton-in-1949.html">How a watch works - film from Hamilton in 1949</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/09/More-on-the-SpringDrive-movement.html">More on the SpringDrive movement</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/06/Atomic-solar-analog-and-classy.html">Atomic, solar, analog and classy</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/06/Supercheap-skeletonized-automatic-watches.html">Supercheap skeletonized automatic watches.</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/02/Thermocompensated-quartz-movements.html">Thermocompensated quartz movements</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/10/30/Another-Marinemaster-600-review.html">Another Marinemaster 600 review</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/10/28/More-on-watch-madness-the-Seiko-SBDB001.html">More on watch madness - the Seiko SBDB001</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/10/28/Retrocomputing-and-mechanical-watches.html">Retrocomputing and mechanical watches</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/10/11/A-new-affectation-strikes-our-hero.html">A new affectation strikes our hero.</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>News</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/12/21/Putin-wears-Philippe-Bush-wears-timex.html">Putin wears Philippe, Bush wears timex</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/12/03/Added-Google-analytics-to-the-site.html">Added Google analytics to the site</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/25/Test-post-for-email-notification.html">Test post for email notification</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/25/SRV-records-for-Asterisk.html">SRV records for Asterisk</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/23/Email-subscriptions-now-possible.html">Email subscriptions now possible.</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/08/When-your-telephone-knows-you-re-there.html">When your telephone knows you're there</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/10/28/CaffeineFinder-updated-to-1-0-3.html">CaffeineFinder updated to 1.0.3</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/10/11/Moved-to-sunny-California-Trite-eh.html">Moved to sunny California. Trite, eh?</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/06/13/WordPress-creation.html">WordPress creation</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>Audio</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/12/11/Client-mode-on-Linksys-WRT54GS.html">Client mode on Linksys WRT54GS</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>Music</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/12/11/Client-mode-on-Linksys-WRT54GS.html">Client mode on Linksys WRT54GS</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>Networking</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/12/11/Client-mode-on-Linksys-WRT54GS.html">Client mode on Linksys WRT54GS</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/30/Apple-broadband-tuner.html">Apple broadband tuner</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>Blackberry</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/12/08/Free-google-local-client.html">Free google local client.</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/30/Blackberry-categories-blow-chunks.html">Blackberry categories blow chunks.</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/15/Opera-Mini-update.html">Opera Mini update</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/15/Excellent-new-Opera-Mini-for-blackberry.html">Excellent - new Opera Mini for blackberry</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>Aviation</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/12/03/Watches-for-flying.html">Watches for flying</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/12/03/Breitling-and-analog-digital.html">Breitling and analog-digital</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>Essays</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/12/03/Watches-for-flying.html">Watches for flying</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/09/We-know-that-the-most-dangerous-human-trait-is-an-absence-of-self-doubt-and.html">We know that the most dangerous human trait is an absence of self-doubt, and</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/10/28/More-on-watch-madness-the-Seiko-SBDB001.html">More on watch madness - the Seiko SBDB001</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/10/28/Retrocomputing-and-mechanical-watches.html">Retrocomputing and mechanical watches</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>OSX</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/11/30/Apple-broadband-tuner.html">Apple broadband tuner</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/15/Nice-two-page-list-of-OSS-mac-software.html">Nice two-page list of OSS mac software</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/08/Aquamacs.html">Aquamacs!</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>Seiko</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/11/29/A-complete-catalog-of-all-the-Seiko-divers.html">A complete catalog of all the Seiko divers</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>VOIP</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/11/25/I-really-want-a-silent-PC-so-I-can-run-OpenBSD-and-pf-again.html">I really want a silent PC so I can run OpenBSD and pf again</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/25/SRV-records-for-Asterisk.html">SRV records for Asterisk</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/08/When-your-telephone-knows-you-re-there.html">When your telephone knows you're there</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>Wisdom</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/11/09/We-know-that-the-most-dangerous-human-trait-is-an-absence-of-self-doubt-and.html">We know that the most dangerous human trait is an absence of self-doubt, and</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/09/A-really-cool-quote.html">A really cool quote.</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>Blackbery</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/10/28/CaffeineFinder-updated-to-1-0-3.html">CaffeineFinder updated to 1.0.3</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>Macintosh</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/06/13/Macintosh-stuff-notes-and-recommendations.html">Macintosh stuff - notes and recommendations</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>WordPress</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/06/13/WordPress-creation.html">WordPress creation</a></li>
+                </ul>
+                  </li>
 
 
-                        </ul>
-                    </div>
-                </article>
-            </div>
-            <div class="right">
-                <h3>CONTACT</h3>
-                <article>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>123 456789</p>
-                        <p>123 456789 456</p>
-                    </div>
-                </article>
-            </div>
+          </ul>
+         
+          </div>     
+          
         </div>
-    </footer>
-    <div class="footer_bottom">
+        
+        </section>
+        </div>
+        
+        <footer class="clearfix">
         <div class="container">
-            <article>
-                <div>
-                    <p class="left">THE TIMELINE  |  All Rights Reserved.</p>
-                    <p class="right">Blog theme by : <a href = "http://statiked.com" target = "_blank">Statiked</a></p>
-                </div>
-            </article>
+        <div class="left-container"><a href="#">Snowhite</a> | <a href="#">All Rights Reserved.</a></div>
+         <div class="right-container">Blog theme by : <a href="http://statiked.com" target ="_blank">Statiked</a></div>
         </div>
-    </div>
+        </footer>
 
-    <script src="http://fnord.phfactor.net/theme/js/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="http://fnord.phfactor.net/theme/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
- <!-- <script src="js/vendor/jquery-1.10.2.min.js"></script>-->
-    <script src="http://fnord.phfactor.net/theme/js/respond.src.js"></script>
-    <script src="http://fnord.phfactor.net/theme/js/jquery.flexslider.js"></script>
-    <script src="http://fnord.phfactor.net/theme/js/dropdown-menu.js"></script>
-    <script src="http://fnord.phfactor.net/theme/js/main.js"></script>
-    <script src="http://fnord.phfactor.net/theme/js/plugins.js"></script>
-   
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-     <script type="text/javascript">
+
+
+
+        <script src="http://fnord.phfactor.net/theme/js/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="http://fnord.phfactor.net/theme/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="http://fnord.phfactor.net/theme/js/plugins.js"></script>
+        <script src="http://fnord.phfactor.net/theme/js/main.js"></script>
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+          <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', '']);
     _gaq.push(['_trackPageview']);
@@ -496,5 +453,5 @@
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-</body>
+    </body>
 </html>

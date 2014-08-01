@@ -4,7 +4,7 @@
   <title><![CDATA[Fnord]]></title>
   <link href="http://fnord.phfactor.net/atom.xml" rel="self"/>
   <link href="http://fnord.phfactor.net/"/>
-  <updated>2014-08-01T08:50:38-07:00</updated>
+  <updated>2014-08-01T08:52:45-07:00</updated>
   <id>http://fnord.phfactor.net/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -15,7 +15,7 @@
   <entry>
     <title type="html"><![CDATA[Welcome to Fnord, Statiked version]]></title>
     <link href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html"/>
-    <updated>2014-07-31T17:16:11+00:00</updated>
+    <updated>2014-08-01T15:55:50+00:00</updated>
     <id>http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html</id>
     <content type="html"><![CDATA[<p>The blog platform and server are now both changed - I've been using Octopress and self-hosting, but the
 Rake-based workflow was painful and slow, and while I don't regret funding the Ghost project they still haven't had
@@ -114,7 +114,7 @@ authentication I had enabled. Disable it and voila.</p>
 <entry>
     <title type="html"><![CDATA[Watches for flying]]></title>
     <link href="http://fnord.phfactor.net/2005/12/03/Watches-for-flying.html"/>
-    <updated>2014-08-01T15:04:09+00:00</updated>
+    <updated>2014-08-01T15:53:08+00:00</updated>
     <id>http://fnord.phfactor.net/2005/12/03/Watches-for-flying.html</id>
     <content type="html"><![CDATA[<p>I'm close to finishing my quest for a private pilot's license, and am still looking for a good watch to wear.</p>
 <p>From personal preference, I want to have</p>
