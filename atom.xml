@@ -13,6 +13,16 @@
   <generator uri="http://www.statiked.com/">Statiked</generator>
 
   <entry>
+    <title type="html"><![CDATA[Image links]]></title>
+    <link href="http://fnord.phfactor.net/2014/08/01/Image-links.html"/>
+    <updated>2014-08-01T17:45:26+00:00</updated>
+    <id>http://fnord.phfactor.net/2014/08/01/Image-links.html</id>
+    <content type="html"><![CDATA[<p>You think it'd be easy: Post an image that links somewhere. It's <a href="http://meta.stackexchange.com/questions/2133/whats-the-recommended-syntax-for-an-image-with-a-link">not</a></p>
+<p>Not sure where the bug is.</p>
+<p><a href="http://www.phfactor.net">![Orient watch](http://www.phfactor.net/pics/watches/orient.jpg)</a></p>
+]]></content>
+  </entry>
+<entry>
     <title type="html"><![CDATA[Welcome to Fnord, Statiked version]]></title>
     <link href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html"/>
     <updated>2014-08-01T15:55:50+00:00</updated>
@@ -292,14 +302,6 @@ A: An ape with a big watch.</p>
 907 Invalid JAR
 HTTP Error 406: Not acceptable.</p>
 <p>Odd. The http://mini.opera.com/mnt tester is OK, so this may be an OS4 issue.</p>
-]]></content>
-  </entry>
-<entry>
-    <title type="html"><![CDATA[Nice two-page list of OSS mac software]]></title>
-    <link href="http://fnord.phfactor.net/2005/11/15/Nice-two-page-list-of-OSS-mac-software.html"/>
-    <updated>2014-07-31T17:25:42+00:00</updated>
-    <id>http://fnord.phfactor.net/2005/11/15/Nice-two-page-list-of-OSS-mac-software.html</id>
-    <content type="html"><![CDATA[<p><a href="http://www.opensourcemac.org/">OpenSourceMac</a>, a nice list of OSS software. I found some stuff I hadn't seen before, and the page layout is much better than mine. </p>
 ]]></content>
   </entry>
 
