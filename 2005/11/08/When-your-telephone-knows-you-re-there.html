@@ -2,145 +2,46 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Fnord</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="nofollow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fnord</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-        <link rel="stylesheet" href="http://fnord.phfactor.net/theme/css/normalize.css">
-        <link rel="stylesheet" href="http://fnord.phfactor.net/theme/css/main.css">
-        <link rel="stylesheet" href="http://fnord.phfactor.net/theme/css/style.css">
-        <script src="http://fnord.phfactor.net/theme/js/vendor/modernizr-2.6.2.min.js"></script>
-        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-       <link rel="shortcut icon" href="http://fnord.phfactor.net/theme/favicon.ico" type="image/x-icon"/>
-       <style>
-        nav a
-        {
-            text-decoration: none;
-            color: white;
-        }
-        body
-        {
-            z-index: 0;
-        }
-        nav 
-        {
-            z-index: 2;
-            text-align: left;
-        }
-
-        nav ul ul 
-        {
-            display: none;
-            z-index: 2;
-        }
-
-        nav ul li:hover > ul 
-        {
-            display: block;
-        }
-
-        nav ul 
-        {
-            list-style: none;
-            margin: 0px 0px 0px 0px;
-            position: relative;
-            z-index: 2;
-            margin-left: 1px;
-            margin-top: 1px;
-        }
-    
-        nav ul:after 
-        {
-            content: ""; clear: both; display: block;
-        }
-
-        nav ul li 
-        {
-            float: left;
-            z-index: 2;
-        }
-        
-        nav ul li:hover 
-        {
-            background: brown;
-            background: linear-gradient(top, rgb(85, 43, 0) 0%, rgb(85, 43, 0) 40%);
-            background: -moz-linear-gradient(top, rgb(85, 43, 0) 0%, rgb(85, 43, 0) 40%);
-            background: -webkit-linear-gradient(top, rgb(85, 43, 0) 0%,rgb(85, 43, 0) 40%);
-        }
-            
-        nav ul li:hover a 
-        {
-            color: #fff;
-        }
-        
-        nav ul li a 
-        {
-            display: block; padding: 15px 40px;
-            color: #757575; text-decoration: none;
-        }
-            
-        nav ul ul 
-        {
-            background: rgb(85, 43, 0); 
-            border-radius: 0px; padding: 0;
-            position: absolute; top: 100%;
-            z-index: 2;
-        }
-        nav ul ul li 
-        {
-            float: none; 
-            border-top: 1px solid #6b727c;
-            border-bottom: 1px solid rgb(85, 43, 0); position: relative;
-            z-index: 2;
-        }
-        nav ul ul li a 
-        {
-            color: #fff;
-            z-index: 2;
-        }   
-        nav ul ul li a:hover 
-        {
-            background: #4b545f;
-            z-index: 2;
-        }
-        
-        nav ul ul ul 
-        {
-            position: absolute; 
-            left: 100%;
-            top:0;
-            z-index: 2;
-        }
-        </style>
-
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+    <link rel="stylesheet" href="http://fnord.phfactor.net/theme/css/normalize.css">
+    <link rel="stylesheet" href="http://fnord.phfactor.net/theme/css/main.css">
+    <script src="http://fnord.phfactor.net/theme/js/vendor/modernizr-2.6.2.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="http://fnord.phfactor.net/theme/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <link rel="stylesheet" href="css/fontello-ie7.css">
         <![endif]-->
-      
-    <header class="clearfix">
-        <section class="container">
-        <nav>
-            <ul>
-                <li><a href="http://fnord.phfactor.net/about.html">About  </a>  </li>
-                <li><a href="">Recent + </a> 
+
+    <header>
+        <div class="container clearfix">
+            <ul id="example2" class="dropdown-menu">
+                <li><a href="#">Recent<span><img src="http://fnord.phfactor.net/theme/img/down.png" /></span></a>
                     <ul>
                         <li><a href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html">Welcome to Fnord, Statiked version</a> </li>
 <li><a href="http://fnord.phfactor.net/2005/12/23/Paul-tries-pocketwatches.html">Paul tries pocketwatches</a> </li>
 <li><a href="http://fnord.phfactor.net/2005/12/21/Putin-wears-Philippe-Bush-wears-timex.html">Putin wears Philippe, Bush wears timex</a> </li>
 
+
                     </ul>
                 </li>
-                <li><a href="">Archives + </a> 
-                    <ul>
+                <li>
+                    <a href="#">Archives <span>
+                        <img src="http://fnord.phfactor.net/theme/img/down.png" /></span></a>
+                        <ul>
                     
                     
                             
@@ -231,8 +132,10 @@
 
                     </ul>
                 </li>
-                <li><a href="">Categories +</a> 
-                    <ul>
+                <li>
+                    <a href="#">Categories <span>
+                        <img src="http://fnord.phfactor.net/theme/img/down.png" /></span></a>
+                        <ul>
                         <li><a href="#">statiked</a>
                                     <ul>
                                         <li><a href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html">Welcome to Fnord, Statiked version</a></li>
@@ -430,116 +333,143 @@
                                     </li>
 
 
-                    </ul>
+                        </ul>
                 </li>
-                <div class="feed"><a href="http://fnord.phfactor.net/atom.xml"><i class="icon-rss"></a></i></div>
-            </ul>
-        </nav>
-        
-        <div id="logobox" class="content-box">
-            
-            <div class="logo"><img src="http://fnord.phfactor.net/theme/img/vintage-logo.png" alt=""></div>
-            <a href = "http://fnord.phfactor.net"><div class="vintage-text">
-                <h1><strong>Fnord</strong></h1>
-                <p>Half duplex nerd mutterings</p>
-            </div></a>
-        </div>
-      </section>
-    
-        </header>
-        
-        
 
-<div class="main clearfix">
-        <section id="posts" class="container"> 
-            <article class="content-box">
-                <div class="date">8<span>Nov</span></div>
-                <h1>When your telephone knows you're there</h1>
-                <p><p>I just stumbled on an interesting article, using Bluetooth to tell Asterisk about presence. The idea is that, if you're not around, Asterisk can redirect calls to your cell phone or similar.</p>
+            </ul>
+        </div>
+    </header>
+    <div class="top">
+        <div class="container">
+            <a class="slidDown">
+                <!--<div class="blueArrow"></div>-->
+            </a>
+            <a class="rss" href="http://fnord.phfactor.net/atom.xml"></a>
+        </div>
+
+    </div>
+
+<div>
+        <section>
+            <div class="container">
+                <a href="http://fnord.phfactor.net/index.html">
+                <div class="timeline_banner">
+                    <h1>Fnord</h1></br><h3 style = "color:white">Half duplex nerd mutterings</h3>
+                </div>
+                </a>
+         
+            <div class="small_date">
+                <article class="date">
+                    8<span>Nov</span>
+
+                </article>
+            </div>
+            <div class="main">
+
+                <div class="min_inner clearfix">
+                    <h3>When your telephone knows you're there</h3>
+                    <article>
+
+                        <div>
+                            <p>I just stumbled on an interesting article, using Bluetooth to tell Asterisk about presence. The idea is that, if you're not around, Asterisk can redirect calls to your cell phone or similar.</p>
 <p>Clever, I must admit. I use Asterisk now, though I've a way to go to really get the most out of it.</p>
 <p><a href="http://mundy.org/blog/index.php?p=78">Check it out.</a></p>
-</p>
-                <div class="socialbar">
-                    <div class="clearfix"></div>
-                    <ul>
-                        <li><i class="icon-tag-1"></i>
-                          <span>News, </span>
-<span>VOIP</span>
-</li>
-                        <li><i class="icon-comment"></i> <span> 
-                                
-                                 </span></li>
-                        <li class="push-right">
-                            <a href="https://twitter.com/intent/tweet?text=http://fnord.phfactor.net/2005/11/08/When-your-telephone-knows-you-re-there.html" onclick="javascript:window.open(this.href,
-                                '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="icon-twitter-circled"></i></a>
-                            
-                            
-                        </li>
-                    </ul>
+
+                        </div>
+                    </article>
+
                 </div>
-                
+            </div>
+            <div class="main_bottom clearfix">
+                <article>
+                    <div class="social_media">
+                        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://fnord.phfactor.net/2005/11/08/When-your-telephone-knows-you-re-there.html" onclick="javascript:window.open(this.href,
+                            '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
+                        
+                        
+                    </div>
+                    <label class="comment">
+                        
+                                
+                                
+                                 </label>
+                    <label class="tag">
+                    News,
+VOIP
+
+                    </label>
+                    
              
              
-            </article>
-        </section>
+                </article>
+            </div>
 </div>
+</section>
+</div>   
+    
+    <footer>
+        <div class="container">
+            <div class="left">
+                <h3>ABOUT</h3>
+                <article class="list">
 
-        <footer>
-        <div class="container" id="footer">
-        <div class="col-180">
-        <h3>ABOUT</h3>
-        Paul Hubbard here, pleased you dropped by to my personal site. Hope you like it.
+                    <figure class="clearfix">
+                        <img src="img/testing.png" alt="" />
+                    </figure>
+                    <div>
+                        Hello this is my first Statiked Blog. To change the contents of this short introduction, change short_introduction.html file in _includes
+                    </div>
+                </article>
+            </div>
+            <div class="right">
+                <h3>RECENT POSTS</h3>
+                <article>
+                    <div>
+                        <ul>
+                            <li><a href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html">Welcome to Fnord, Statiked version</a></li>
+<li><a href="http://fnord.phfactor.net/2005/12/23/Paul-tries-pocketwatches.html">Paul tries pocketwatches</a></li>
+<li><a href="http://fnord.phfactor.net/2005/12/21/Putin-wears-Philippe-Bush-wears-timex.html">Putin wears Philippe, Bush wears timex</a></li>
 
+
+                        </ul>
+                    </div>
+                </article>
+            </div>
+            <div class="right">
+                <h3>CONTACT</h3>
+                <article>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>123 456789</p>
+                        <p>123 456789 456</p>
+                    </div>
+                </article>
+            </div>
         </div>
-        <div class="col-180"><h3>POPULAR POST</h3>
-        <ul class="list">
-        <li>
-        <a href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html">Welcome to Fnord, Statiked version</a>
-        </li>
-<li>
-        <a href="http://fnord.phfactor.net/2005/12/23/Paul-tries-pocketwatches.html">Paul tries pocketwatches</a>
-        </li>
-<li>
-        <a href="http://fnord.phfactor.net/2005/12/21/Putin-wears-Philippe-Bush-wears-timex.html">Putin wears Philippe, Bush wears timex</a>
-        </li>
-
-        </ul>
+    </footer>
+    <div class="footer_bottom">
+        <div class="container">
+            <article>
+                <div>
+                    <p class="left">THE TIMELINE  |  All Rights Reserved.</p>
+                    <p class="right">Blog theme by : <a href = "http://statiked.com" target = "_blank">Statiked</a></p>
+                </div>
+            </article>
         </div>
-        </div>
-       <div class="sub-footer container">
-        <div class="left-container"><a href="#">THE VINTAGE BLOG  </a> | <a href="#">All Rights Reserved.</a></div>
-         <div class="right-container">Blog theme by : <a href="http://statiked.com" target = "_blank">Statiked</a></div>
-        </div>
-        </footer>
+    </div>
 
+    <script src="http://fnord.phfactor.net/theme/js/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="http://fnord.phfactor.net/theme/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+ <!-- <script src="js/vendor/jquery-1.10.2.min.js"></script>-->
+    <script src="http://fnord.phfactor.net/theme/js/respond.src.js"></script>
+    <script src="http://fnord.phfactor.net/theme/js/jquery.flexslider.js"></script>
+    <script src="http://fnord.phfactor.net/theme/js/dropdown-menu.js"></script>
+    <script src="http://fnord.phfactor.net/theme/js/main.js"></script>
+    <script src="http://fnord.phfactor.net/theme/js/plugins.js"></script>
+   
 
-
-
-
-        <script src="http://fnord.phfactor.net/theme/js/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="http://fnord.phfactor.net/theme/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script defer src="http://fnord.phfactor.net/theme/js/jquery.flexslider-min.js"></script>
-        
-        <script src="http://fnord.phfactor.net/theme/js/plugins.js"></script>
-        <script src="http://fnord.phfactor.net/theme/js/main.js"></script>
-          <script type="text/javascript">
-    $(function(){
-      SyntaxHighlighter.all();
-    });
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
-  </script>
-
-
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-          <script type="text/javascript">
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', '']);
     _gaq.push(['_trackPageview']);
@@ -551,7 +481,7 @@
     })();
   </script>
         
-        
+
           <script type="text/javascript">
     (function() {
       var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
@@ -568,5 +498,5 @@
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-    </body>
+</body>
 </html>

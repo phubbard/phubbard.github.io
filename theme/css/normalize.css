@@ -17,6 +17,7 @@ footer,
 header,
 hgroup,
 main,
+nav,
 section,
 summary {
     display: block;
@@ -150,6 +151,11 @@ h5 {
 h6 {
     font-size: 0.67em;
     margin: 2.33em 0;
+}
+
+p{
+    line-height:170%;
+    text-align:left;
 }
 
 /**
@@ -311,6 +317,12 @@ ul {
 /**
  * Correct list images handled incorrectly in IE 7.
  */
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
 
 /* ==========================================================================
    Embedded content
