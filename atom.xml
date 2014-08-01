@@ -4,7 +4,7 @@
   <title><![CDATA[Fnord]]></title>
   <link href="http://fnord.phfactor.net/atom.xml" rel="self"/>
   <link href="http://fnord.phfactor.net/"/>
-  <updated>2014-07-31T10:17:44-07:00</updated>
+  <updated>2014-07-31T12:15:20-07:00</updated>
   <id>http://fnord.phfactor.net/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -35,273 +35,266 @@ authentication I had enabled. Disable it and voila.</p>
 ]]></content>
   </entry>
 <entry>
-    <title type="html"><![CDATA[Gigabit ethernet - what you need]]></title>
-    <link href="http://fnord.phfactor.net/2005/06/13/Gigabit-ethernet-what-you-need.html"/>
-    <updated>2014-07-31T16:54:11+00:00</updated>
-    <id>http://fnord.phfactor.net/2005/06/13/Gigabit-ethernet-what-you-need.html</id>
-    <content type="html"><![CDATA[<p>For several years, those of us with home networks have been running 10/100 mixed LANs, usually with switches here and there. Works well, cheap, reliable and easy to wire. Very few indeed have home gigabit; the adapters are cheap but switches have been very expensive.However, that's no longer the case.</p>
-<h2>Goals</h2>
-<p>Cheap, reliable, low-power, no cooling fans. Oh yeah, I want fast, too, so we need jumbo frames (9000 byte packets instead of 1500; makes a huge difference in performance) and a fully non-blocking switch.</p>
-<p>This is all on twisted pair, indoors, for home use.</p>
-<p>For my network, I need an 8 port switch; you may be able to get by with less.</p>
-<h2>Cut to the chase!</h2>
-<p>If you need 8 ports, the best option I've found is the <a href="http://www.amazon.com/exec/obidos/tg/detail/-/B0000AKA95/qid=1108072034/sr=8-1/ref=sr_8_xs_ap_i1_xgl23/102-3980408-2513710?v=glance&amp;s=electronics&amp;n=507846">SMC 8508T (Amazon, non-affiliate link)</a>. $100, jumbo frames, 15W power, no cooling fans, 16Gbit bisection bandwidth, decent blinky lights:</p>
-<p><img src="http://www.phfactor.net/smc8508t.jpg" alt="Product image" /></p>
-<p>If you can live with fewer ports, the otherwise-identical 5-port version is the <a href="http://www.amazon.com/exec/obidos/ASIN/B0000AKA94/qid%3D1108072400/sr%3D11-1/ref%3Dsr%5F11%5F1/102-3980408-2513710">SMC 8505T (Amazon again)</a> for $67:</p>
-<p><img src="http://www.phfactor.net/smc8505t.jpg" alt="Product image" /></p>
-<p>About the only disadvantage of either one is that they use a wall-wart power supply instead of an internal. On the plus side, the do come with both rubber feet and rack ears. These are both really nice little switches in my opinion.</p>
-<h2>Which network card should I buy?</h2>
-<p>For network cards, I like the <a href="http://www.zipzoomfly.com/jsp/ProductDetail.jsp?ProductCode=250045">3Com 996BT (ZipZoomFly)</a>, about $60 from various venders. The <a href="http://www.zipzoomfly.com/jsp/ProductDetail.jsp?ProductCode=251402">Intel Pro 1000/XT</a> (130, ZZF) is also supposed good and reasonably cheap. If you've got the cash, the best card is the <a href="http://froogle.google.com/froogle?q=syskonnect+9821&amp;btnG=Search+Froogle">SysKonnect SK9821 (Froogle, appx $100)</a>. To get good throughput, PCI-X or 66/64 is pretty much required. Otherwise, you'll get 2-3X faster than fast Ethernet at best.</p>
-<p>Given that the SysKonnect prices have fallen fast (they used to cost $500) I'd recommend the 9821. I ended up with 3C996's, since I bought them a while ago when SysKonnext cost 6X more. Note that the 996 is actually a Broadcom chip, and uses the Tigon 3 driver (tg3) in Linux.</p>
-<p>Many motherboards now have gigabit included on them as well. Bonus, that.</p>
-<h2>Read For Yourself</h2>
-<p>This page represents quite a bit of research for me, and I've just presented my conclusions. However, you don't have to take my word for it!</p>
-<p>Anthony Betz and Paul Gray at Iowa did an <a href="http://www.cs.uni.edu/%7Egray/gig-over-copper/gig-over-copper.html">excellent review of gigabit/copper cards</a> that is where my recommendations come from. Read and be enlightened.</p>
-<ul>
-<li><p>Anthony Betz and Paul Gray at Iowa did an <a href="http://www.cs.uni.edu/%7Egray/gig-over-copper/gig-over-copper.html">excellent review of gigabit/copper cards</a> that is where my recommendations come from. Read and be enlightened.</p>
-</li>
-<li><p>For more about jumbo frames, read <a href="http://www.small-tree.com/jumbo1.htm">this commercial page</a> and <a href="http://sd.wareonearth.com/%7Ephil/jumbo.html">this WAN-based page</a>. I'm not sure I buy the huge improvements they graph, but you'll get the idea.</p>
-</li>
-<li><p>If you want to know if a piece of hardware supports jumbo frames, dig into the tech specs. If it doesn't say jumbo frames are supported, assume they are not! This <a href="http://darkwing.uoregon.edu/%7Ejoe/jumbo-clean-gear.html">page at Oregon has a nice list of hardware</a> with and without jumbo support.</p>
-</li>
-</ul>
-<h2>Things To Watch Out For</h2>
-<ul>
-<li><p>It's pretty much impossible to tell online if a switch has cooling fans or not. Since most of them use the 40mm size, they make lots of noise and fail quickly. Google, or check it out in person. I've gotten a lot pickier about noise of late, so this was a showstopper for me.</p>
-</li>
-<li><p>Not all jumbo frames are created equal. Vendors have been know to call 82 extra bytes a jumbo. You want 9000 or better.</p>
-</li>
-<li><p>My Dell Optiplex GX280's came with an onboard Gig-E card, a Broadcom BCM95751. It uses the same driver as my 3C996, but can't do jumbo frames! I have the same machine under XP, and no jumbo there either. Hardware limitation.</p>
-</li>
-<li><p>Despite having gigabit on their laptops years before anyone else, Apple Powerbooks do not support jumbo frames.</p>
-</li>
-<li><p>No, this will not speed up your DSL connection.</p>
-</li>
-<li><p>If the first speed test you try is scp/sftp, you'll be disappointed. However, PSC has a 7-line patch to scp that speeds it <em>way</em> up. Like 10X faster. <a href="http://www.psc.edu/networking/projects/hpn-ssh/">Go and get it.</a></p>
-</li>
-</ul>
-<h2>So why bother?</h2>
-<ul>
-<li><p>High geek value.</p>
-</li>
-<li><p>It is faster, after all.</p>
-</li>
-<li><p>You can beat down anyone who complains about lag at your next LAN party.</p>
-</li>
-</ul>
-<p>Most importantly: The hardware is now down around the cost levels of slower 10/100 gear, so there's no reason to pay 10 bucks less on a switch when you can get gigabit.</p>
-<p>Go for it.</p>
-<p>Update 10/3/07: See <a href="http://www.phfactor.net/wp/2007/10/04/more-cool-networking-gear/">this updated post</a> for a revised switch/router too.</p>
+    <title type="html"><![CDATA[Paul tries pocketwatches]]></title>
+    <link href="http://fnord.phfactor.net/2005/12/23/Paul-tries-pocketwatches.html"/>
+    <updated>2014-07-31T18:51:14+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/12/23/Paul-tries-pocketwatches.html</id>
+    <content type="html"><![CDATA[<p>Yesterday, after an epic shipping adventure involving ebay, paypal, UPS and several phone calls, my new toy arrived:</p>
+<p><a href="http://stores.ebay.com/WFN-ENTERPRISES-INC">![Helbros pocketwatch](http://www.phfactor.net/pics/watches/helbros.jpg)</a></p>
+<p>(Link to is the ebay seller who sold it to me.)</p>
+<p>Bad news first - it's not really a moonphase. And it doesn't have a seconds hand. That's a hairspring window, not a <a href="http://en.wikipedia.org/wiki/Tourbillon">tourbillon.</a></p>
+<p>Then again, it <em>was</em>$40USD. So I'm inclined to cut it some slack. I had wanted to check out pocket watches, but since I am pretty sure that it'll be a passing fad, I didn't want to spend much money on one. You can easily find vintage Elgin and Hamiltons on ebay, but I decided to get one new so that it wouldn't require immediate maintenance. (Finding someone to work on a mechanical clock is not easy!) As with <a href="http://www.phfactor.net/wp/?p=12">my skeletonized watch</a>, cheap and Chinese is the answer.</p>
+<h3>Pros and cons</h3>
+<p>The hairspring and balance wheel are visible, and you can see most of the <a href="http://www.phfactor.net/wp/?p=27">pallet fork</a> oscillating as well. It's quite fun to watch, pun intended. The two subdials are both 24hr indicators, of different sorts. The one on the left just has all 24 hours printed on it, with a simple hand pointer. The one on the right rotates at the same speed, but is printed with a day/night sort of thing. It looks like a moonphase until you look closely; this is the sort of corner-cutting you expect from cheep-and-cheerful gear. A moonphase (28-day cycle) is more complicated; if you have that the watch usually has day/date as well.</p>
+<p>As with the skeletonized wristwatch, the display is busy and not instantly readable. Not bad, just not the instant read of <a href="http://www.phfactor.net/wp/?p=7">a dive-style watch.</a></p>
+<p>It comes with a pocket chain, pocketknife and integrate desk stand. It's kinda cool to stand it up on your desk and watch the works of the balance.</p>
+<p>The works are pretty quiet; you have to hold it up to your ear to hear the tick-tock. It looks like 5 or 6 beats per second. 17 jewels, no printing on the back, side winder stem, not waterproof.</p>
+<p>Accuracy is hard to measure without a second hand; I've had it a couple of days and the error is not yet visible.</p>
+<p>Helbros is an old brand; I'm guessing that (along with others) it was bought by a Chinese company to give them instant credibility.</p>
+<h3>so?</h3>
+<p>A perfectly reasonable, and very affordable, pocketwatch. Pocketwatches are, of course, an absurd affectation in this day and age. If you get one, it's probably just for enjoyment and odd occasions. I kind of like how it changes your sense of time - when you have to remove the watch from your pocket to look, it's a bit different than just glancing at your wrist. </p>
+<p>Cool.</p>
 ]]></content>
   </entry>
 <entry>
-    <title type="html"><![CDATA[Macintosh stuff - notes and recommendations]]></title>
-    <link href="http://fnord.phfactor.net/2005/06/13/Macintosh-stuff-notes-and-recommendations.html"/>
-    <updated>2014-07-31T16:54:05+00:00</updated>
-    <id>http://fnord.phfactor.net/2005/06/13/Macintosh-stuff-notes-and-recommendations.html</id>
-    <content type="html"><![CDATA[<h4>Change history</h4>
-<ul>
-<li><p>Written 10/2003</p>
-</li>
-<li><p>Updated 11/2003 for Panther (10.3)</p>
-</li>
-<li><p>Added SSH keychain 4/5/04, minor edits</p>
-</li>
-<li><p>Added gCount, MailUnreadStatusBar, Snapz Pro, 7/15/04</p>
-</li>
-<li><p>Added bag section 9/9/04</p>
-</li>
-<li><p>Added OSX Planet, MenuCalendarClock 10/22/04</p>
-</li>
-<li><p>Added Quicksilver 12/19/04</p>
-</li>
-<li><p>Typos fixed, added Meteo 2/14/05</p>
-</li>
-<li><p>Removed 10.2 stuff, some Tiger mentions 6/5/05</p>
-</li>
-<li><p>Porting to wordpress, 6/13/05</p>
-</li>
-<li><p>Added Aquamacs 11/8/05</p>
-</li>
-<li><p>Added Broadband tuner 11/30/05</p>
-</li>
-<li><p>Cleanup, split sections, removed dead links, etc 2/25/06</p>
-</li>
-<li><p>Added Jumpcut and Delibar 2/27/06</p>
-</li>
-<li><p>Added GPG tools, Parallels 8/7/06</p>
-</li>
-<li><p>More on Bags, 8/15/06</p>
-</li>
-<li><p>More on bags, 12/1/06</p>
-</li>
-<li><p>Updated image urls - no more direct linking, my bad. 5/21/07.</p>
-</li>
-<li><p>Updates for 10.5 - spaces, etc. 5/20/08</p>
-</li>
-<li><p>Updates after discovering the page still gets read, 6/18/09. Removing all PowerPC and 10.3 references.</p>
-</li>
-<li><p>Update 4/9/10: Adding GlimerBlocker, ClickToFlash, IRC/IM, a few other edits, trimmed some 10.4 stuff.</p>
-</li>
-<li><p>Update 8/19/10: Add iFixit, Disk Inventory X</p>
-</li>
-<li><p>Update 10/25/10: Add SmartSleep</p>
-</li>
-</ul>
-<p><img src="http://www.phfactor.net/wp-pics/powerbookg4-al-15.gif" alt="" /></p>
-<h2>Introduction</h2>
-<p>As a Unix weenie, I've become quite enamored with <a href="http://sfgate.com/cgi-bin/article.cgi?f=/g/a/2003/10/01/notes100103.DTL&amp;nl=fix">my Macintosh laptop.</a> To the point of advocating them to friends and co-workers. This page is an unstructured attempt to list software I've found, and a few tips and tricks to make your life easier.</p>
-<p>Enjoy, and please leave comments for myself and others. I try to keep the page updated, and if you leave a comment I'll get an email so do chime in!</p>
-<h2>PC emulators for x86 Macs (Macbook, Pro)</h2>
-<p><a href="http://www.parallels.com/en/products/workstation/mac/">Parallels Workstation ($80)</a> is presently the first out of the gate. Seems to deliver around 80% of native performance with the exception of OpenGL. Still not as polished as VMWare or VirtualPC, but damned fast and workable. 2 week evaluation licenses available for the asking. <a href="http://www.vmware.com/mac">VMWare Fusion</a> is also $80, and I prefer it to Parallels for superior USB support and the ability to use all of those free VMWare images available online. Handy, those.</p>
-<p>A new entrant is the Sun-funded <a href="http://www.virtualbox.org/">VirtualBox</a>. You can't beat <strong>free</strong>! I use it as well; not as polished and a trifle slower, but pretty darn good for zero cost.</p>
-<p>Any of the above work; I default to VMware for compatibility with the existing stock of downloadable premade machine images.</p>
-<h2>Development tools</h2>
-<h3>You have to install Xcode off of the install DVD. It's the 'Optional installs' folder.</h3>
-<h3>For all OSX users</h3>
-<p>The <a href="http://fink.sourceforge.net/">Fink project</a> is a <strong>must-have</strong>. Its a complete port of the GNU suite + Debian's package management tools. From their page:</p>
-<blockquote>
-<p>We modify Unix software so that it compiles and runs on Mac OS X("port" it) and make it available for download as a coherent distribution.</p>
+    <title type="html"><![CDATA[Putin wears Philippe, Bush wears timex]]></title>
+    <link href="http://fnord.phfactor.net/2005/12/21/Putin-wears-Philippe-Bush-wears-timex.html"/>
+    <updated>2014-07-31T18:51:28+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/12/21/Putin-wears-Philippe-Bush-wears-timex.html</id>
+    <content type="html"><![CDATA[<p>So George Bush wears a $50 Timex, and Berlosconi wears a half-million-dollar Vacheron.</p>
+<p><a href="http://english.pravda.ru/main/18/90/361/14979_watch.html">Pravda dishes the dirt</a> on world leaders and watches.</p>
+<p>Amusing to note that Putin's watch costs one year of his official salary.</p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[The Value of Time]]></title>
+    <link href="http://fnord.phfactor.net/2005/12/16/The-Value-of-Time.html"/>
+    <updated>2014-07-31T18:51:38+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/12/16/The-Value-of-Time.html</id>
+    <content type="html"><![CDATA[<blockquote>
+<p>The origins of watch collecting are rooted in the utilitarian. When the social time coordination instrument was the village clock, social units tended to cluster around the village square. With the rise of portable, reliable watches, the individual was freed to roam independently from the center of town, and yet remain in sync with the rest of humanity. Today, with the ready availability of completely automated, mass-produced electronic watches, the raison d’etre of a fine mechanical timepiece no longer lies primarily in its timekeeping function. Today, the keystones to value in high mechanical timepieces are set in the perceived values of craft, the reconciliation of tradition and innovation, and their much more fascinating roles as a form of kinetic art and signatures of personal style.</p>
 </blockquote>
-<p>Marvelous. This gets you two key tools - apt and fink. With fink, you install from source and compile, a la the BSD ports method. With apt, you install precompiled binaries, like Debian.</p>
-<p>For CVS assistance, check out <a href="http://www.macdevcenter.com/lpt/a/4143">this page</a>, which has links to several good GUI CVS tools. There are Fink packages for Subversion as well. Git is best downloaded from <a href="http://git-scm.com/">here</a> as a binary installer; it installs into /usr/local/git for some reason.</p>
-<p>There's also <a href="http://darwinports.com/">Darwin Ports</a>, which is the BSD porting system (Open, Free and NetBSD, I think). I've not used it, but many are fans.</p>
-<h2>Web browsers</h2>
-<p>The defaults as of 10.4 is <a href="http://www.apple.com/safari/">Apple's Safari browser</a>, which is pretty decent. <a href="http://www.caminobrowser.org/">Camino</a>, which is mac-native but built around the <a href="http://www.mozilla.org/">Firefox</a> engine, is also good. You can, of course, go get Firefox itself, particularly if you want Greasemonkey script support.</p>
-<p>There's also the <a href="http://hmdt-web.net/shiira/en">Shiira</a> project, which is based on the same WebKit engine as Safari, but has better cookie management and other tweaks. I like it a lot.</p>
-<p>Another solid choice is the now-free <a href="http://opera.com/">Opera.</a> It does an excellent emulation of IE, and is sometimes the only thing that will load a page for me.</p>
-<p>As of Safari V4, I use it as my default and Firefox when I need specific tools like <a href="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=609">Elasticfox</a>.</p>
-<p>Newest is <a href="http://www.google.com/chrome">Google Chrome</a>, which is pretty darn cool.</p>
-<h2>Ad and Flash blockers</h2>
-<p>The best ad blockers in my opinion are the ones implemented as HTTP proxies, as that works with any browser. These days, I strongly recommend <a href="http://glimmerblocker.org/">GlimmerBlocker</a> (free, GPL, runs as a control panel.)</p>
-<p>You also want <a href="http://clicktoflash.com/">ClickToFlash</a>. Yes, you do. Option-click to whitelist a site.</p>
-<p>Now that Safari has plugins/extensions, I love the '<a href="http://extensions.apple.com/#entertainment">A cleaner YouTube</a>' plugin; strips all the crap off of youtube pages.</p>
-<h2>Bookmarking</h2>
-<p>Ever since the advent of <a href="http://del.icio.us/">del.icio.us</a>, people have been changing how and where they manage bookmarks. Local, del.icio.us, .mac, etc.</p>
-<p>I encourage you to experiment. Try <a href="http://www.tuaw.com/2005/12/14/safarilicious/">Safarilicious</a> to upload bookmarks from Safari to del.icio.us, then <a href="http://www.tuaw.com/2006/02/25/delibar-the-missing-link-of-social-bookmarking/">Delibar</a> to make them convenient on the menubar. I have to admit that the <a href="https://addons.mozilla.org/en-US/firefox/addon/3615">Firefox Delicious plugin</a>, which maps them to a normal menu, is seven kinds of awesome.</p>
-<h2>Mail, ftp, sftp, scp, rss</h2>
-<p>Outlook fans should look at <a href="http://www.microsoft.com/mac/products/entouragex/entouragex.aspx?pid=entouragex">Microsoft Entourage</a> - it's free.</p>
-<p>Personally, I quite like the Mail application; it works well for me with IMAPS and ASMTP.</p>
-<p>For FTP, try <a href="http://icu.unizh.ch/~dkocher/cyberduck/">Cyberduck</a>,which is GPL and also handles sftp.</p>
-<p>For scp/sftp only, <a href="http://rsug.itd.umich.edu/software/fugu/">Fugu</a> is marvelous and also free. This is my preferred program, and highly recommended. By the way, the name 'fugu', comes from an elaborate joke based on sushi and cryptography, that is: Fugu is the part of the blowfish you can lick.</p>
-<p>Yeah, there's at least 3 nerd jokes buried in there.</p>
-<p>If you have heavier-duty sftp/ftp duties, <a href="http://www.panic.com/transmit/">Transmit</a> is worth the 30 bucks. Nice queueing system, iMac support, dashboard widget, etc.</p>
-<p>A recent entrant that won my money is <a href="http://www.expandrive.com/mac">ExpanDrive</a>, which uses the MacFUSE layer to provide transparent access to <em>any</em> filesystem over SSH and S3. I use it daily and paid for it out of pocket. There's a free trial, too.</p>
-<p>For RSS, I used to use the now-free <a href="http://ranchero.com/netnewswire/">NetNewsWire</a>. These days, since I have the <a href="http://fnord.phfactor.net/category/iphone/">iPhone</a>, I've switched over to <a href="http://google.com/reader/">Google Reader</a>, which has the advantage of being always-synced between desktop and phone. There's a brand new app called <a href="http://feedafever.com/">Fever</a> that self-hosts and looks interesting, but for now I'll stick with Google.</p>
-<h2>IRC and instant messaging</h2>
-<p>For IRC, the <a href="http://colloquy.info/">Colloquy</a> client is most excellent. <a href="http://psi-im.org/">Psi</a> is excellent for XMPP/Jabber.</p>
-<p>For instant messenger, <a href="http://adium.im/">Adium</a> is a good cross-system app, though it can't do audio or video chat. For that, the included <a href="http://www.apple.com/macosx/what-is-macosx/ichat.html">iChat</a> is good, as are <a href="http://www.google.com/talk/">Google Talk</a> and <a href="http://www.skype.com/welcomeback/">Skype</a>. <a href="http://www.apple.com/mac/facetime/">FaceTime</a> is still beta but an interesting idea.</p>
-<h2>Office Software</h2>
-<p><a href="http://www.microsoft.com/mac/">Microsoft Office for Mac</a> works quite well; make sure and get the patches. There's a free (time bombed) <a href="http://www.microsoft.com/mac/downloads.aspx?pid=testdrive">test drive available</a>.</p>
-<p>There's also <a href="http://porting.openoffice.org/mac/ooo-osx_downloads.html">OpenOffice as well</a>, which is free and evolving rapidly.</p>
-<p>These days I mostly use <a href="http://www.apple.com/ilife/">iLife</a> and <a href="http://www.apple.com/iwork/">iWork</a> for when I need a DOC file or spreadsheet. For documentation and simple formatting, I actually prefer writing HTML files - they have a lot of advantages and for most documents their formatting suffices. Try <a href="http://www.seamonkey-project.org/">Mozilla SeaMonkey</a> for a good free WYSIWYG editor.</p>
-<p>For Visio-type functionality, <a href="http://www.omnigroup.com/applications/omnigraffle/">OmniGraffle Pro</a> is great. If you have a laptop, you may have a copy bundled with the machine in /Applications.</p>
-<p>For presentation software, Apple's <a href="http://www.apple.com/keynote/">Keynote</a> is both megaspiffy and reads and writes Powerpoint. I like it. O'Reilly has <a href="http://www.macdevcenter.com/lpt/a/4185"> a flattering review of Keynote</a> as a total replacement for Powerpoint. Keynote is now part of <a href="http://www.apple.com/iwork/">the iWork suite</a>.</p>
-<p>For screen captures, which I use quite a bit for generating documentation, OSX includes a program called 'Grab' that does a decent job. It outputs TIFFs, but you can use Folder Actions to auto-convert to JPG/PNG. Or you can do what I've done, and pay the money for <a href="http://www.ambrosiasw.com/utilities/snapzprox/">Snapz Pro</a>. It has a bunch of additional capabilites, like capturing movies of the desktop, audio, etc. Free trial available.</p>
-<h2>Scheduling, Entourage integration, iCal(endar)</h2>
-<p>One common requirement when working with Windows machines is Outlook integration. This is partially possible with a bit of work. Outlook can export iCalendar-format .ics files, which are compatible with iCal and Mail. This is my solution right now, and seems to work OK.</p>
-<p>If you're using iCal, check out <a href="http://www.objectpark.net/mcc.html">MenuCalendarClock.</a> It replaces the time in the upper right, but you can have it display a calendar and (if you pay) your iCal schedule for the day! Wonderful, unobtrusive, works great.</p>
-<p>For calendar sharing, I've spent many hours on this to very poor results, so I have to recommend MobileMe or Google Calendars. If you have Exchange server, that works too. No great solutions here, at least not for free.</p>
-<p><strong>Analysis, Graphing, Math</strong></p>
-<p>For time-series data, I am a long-time fan of the cross-platform <a href="http://www.synergy.com/">Kaleidagraph</a>. Excellent plots and analysis tools.</p>
-<p>If you need it, <a href="http://www.mathworks.com/products/matlab/">MATLAB</a> is available. Not cheap, but that's always been true.</p>
-<p>The same applies to <a href="http://www.wolfram.com/products/mathematica/">Mathematica</a>, of course.</p>
-<p>For freeware, <a href="http://www.octave.org/">Octave</a> is a GNU workalike for MATLAB; there are others depending on your needs. The <a href="http://www.r-project.org/">R Project</a> is another alternative is you need lots of statistics.</p>
-<h2>Editors</h2>
-<p>A perennial favorite is called <a href="http://www.barebones.com/products/bbedit/index.shtml">BBEdit</a>- very nice support for code (compilation, code highlighting, CVS), HTML, etc. They also have a simpler, free version called <a href="http://www.barebones.com/products/textwrangler/index.shtml">TextWrangler.</a></p>
-<p><a href="http://www.barebones.com/products/textwrangler/index.shtml"> </a></p>
-<p>I've paid for and like <a href="http://macromates.com/">TextMate</a>, it's quite code-friendly and expandable.</p>
-<p>Emacs works in Terminal; if you</p>
-<pre><code> setenv TERM dtterm
-</code></pre>
-<p>then syntax highlighting works as well.</p>
-<p>There's also <a href="http://aquamacs.org/">Aquamacs</a>, which looks even better. I use it and quite like it.</p>
-<p>More recent editors also include <a href="http://smultron.sourceforge.net/">Smultron (GPL!)</a>, <a href="http://macromates.com/">TextMate (commercial)</a> and <a href="http://www.jedit.org/">JEdit (GPL, Java, cross-platform)</a></p>
-<p>JEdit in particular seems to have quite the following, as of 2/06 there were over 80 plugins for it. Seems a bit easier to use than the full-bore-IDE of Eclipse.</p>
-<p>For Python, IPython and <a href="http://www.activestate.com/komodo/">Komodo</a> make a good combo, as does TextMate for simpler code.</p>
-<h3>TeX and LaTeX</h3>
-<p>Once you've got Fink installed, you can install TeX and LaTex. A nice GUI shell for working with them is <a href="http://www.uoregon.edu/%7Ekoch/texshop">TeXShop</a>, which works a treat. Note that, for strange reasons, it uses pdftex, which is not quite the same as vanilla TeX as far as, say, EPS support.</p>
-<h2>Menu bar applets</h2>
-<p>These live on the menu bar, always running and doing useful stuff.</p>
-<p>Start off by getting <a href="http://www.islayer.com/apps/istatmenus/">iStat Menus</a>. It shows CPU, network, disk activity and more. Free, polished, donation-ware. (Version 2 is nag-ware, so I'm no longer using it.)</p>
-<p><a href="http://www.ragingmenace.com/software/menumeters/">MenuMeters</a> is a GPL'd program to monitor memory, disk activity, network, swap and such. Also gives fast access to things like the Activity Monitor, network settings, net util, etc. Almost as good as iStat.</p>
-<p><a href="http://www.sshkeychain.org/">SSH Keychain</a> is another GPL'd utility that I <strong>highly</strong> recommend. It handles your SSH key for you, can optionally revoke it on sleep/screensaver, integrates with Fugu, SSH tunnel manager, ssh, scp, sftp, CVS, etc. Wonderful stuff.</p>
-<p>See above under 'Scheduling' for MenubarCalendarClock - recommended.</p>
-<p><a href="http://heat-meteo.sourceforge.net/">Meteo</a> is a free, open-source applet that displays weather on the menubar. Simple, flexible, reliable. Quite nice, especially if you have a windowless office, or travel a lot.</p>
-<p>One of the annoying things about the mac clipboard is that it only stores one entry. When I'm writing something up, its often useful to have several URLs available. Until now, I had experimented with the commercial <a href="http://www.iggsoftware.com/ipaste/index.html">iPaste</a>, but didn't like it enough to keep past the trial.</p>
-<p>I just found a free replacement called <a href="http://www.snarkout.org/projects/jumpcut/">Jumpcut</a> that is a must-download. It puts a small icon on the menubar, with a dropdown list of entries. Clicking moves that entry into the clipboard for use. That way, I can keep the last 20 or so things I copied or cut around... really handy. Another way to get this functionality is to run <a href="http://www.obdev.at/products/launchbar/">LaunchBar</a>, which has it as a side feature.</p>
-<h2>Cool Random Stuff</h2>
-<p>When I had a Linux desktop at work, I used to have xplanet running as a backdrop, with hand-scripted alpha-blended cloud data from the UWisc Near-IR satellite. I was the nerd equivalent of a hipster. Now, of course, you can get the same effect, only more so and free, on OSX. Head on over to <a href="http://otte.ucsc.edu/~gabriel/osxplanet.html">this page and get OSXPlanet</a>, which is one of the coolest programs you'll see in a long time. Free, too.</p>
-<p>Prepare to waste many hours if you've not tried <a href="http://earth.google.com/">Google Earth</a>. Be sure to try the flight simulator part!</p>
-<p>There's an awesome Mac-only app called <a href="http://streamripperx.sourceforge.net/">StreamRipperX</a> that takes an Internet radio station and writes MP3 files to disk from the content. Set it running, leave it overnight, and come back in the
-morning to a bunch of nicely named and saved files. Mondo cool.</p>
-<p>For wireless networks, <a href="http://freshmeat.net/projects/kismac/?topic_id=861%2C43%2C152">KisMAC</a> does a great job and has the side benefit of not sending anything, ensuing that innocent searching does not bring down the wrath of the network BOFH.</p>
-<p><a href="http://www.tobias-jung.de/seekingprofont/">ProFont</a> is a monospaced font for Mac, Windows and Unix designed for code. Wonderful stuff. It has a lot of little touches, such as distinguishable l/1, slashed zeros, clear punctuation, and others. Also excellent for terminal windows. There's also <a href="http://www.ms-studio.com/FontSales/anonymouspro.html">AnonymousPro</a>.</p>
-<p><strong>Quicksilver</strong></p>
-<p>One hard-to-classify app is a piece of freeware called <a href="http://quicksilver.blacktree.com/">Quicksilver.</a> It's sort of a search program, that can do many other things. Launch programs, search your bookmarks, file management, all sorts of stuff. I used to be a hardcore fan, but the developer abandoned it and it's gotten less reliable as the OS evolved. These days I run <a href="http://www.obdev.at/products/launchbar/">LaunchBar</a> instead; ahh well. Very similar in function and definitely more polished than QS was.</p>
-<p>Battery and sleep - OSX is a bit annoying about sleep and hibernate, but <a href="http://www.jinx.de/SmartSleep.html">SmartSleep</a> will solve the problem for you. Recommended.</p>
-<p>Screensavers and eye candy</p>
-<p>If you've got 3D onboard, the <a href="http://www.ati.com/developer/demos/macss2/index.html">ATI OpenGL demos and screensavers</a> are awesome. And free.</p>
-<p>The essential Matrix screensaver is called <a href="http://meta.ath0.com/articles/2005/05/10/redpill-1-4-2">Red Pill</a>. Free, very well done, open source.</p>
-<h2>PGP/GPG, Mail plugins and utilities</h2>
-<p><a href="http://www.tikouka.net/mailapp/">This page has plugins for Mail</a>, including stuff like Entourage imports, spamcop, mail count in the menubar,all sorts of amazing and useful stuff.</p>
-<p>For GPG, I use the <a href="http://macgpg.sourceforge.net/">MacGPG</a> distribution plus the <a href="http://www.sente.ch/software/GPGMail/English.lproj/GPGMail.html">GPGMail plugin.</a> Works fabulously, though you need to set the 'By default, use OpenPGP/MIME' option for some clients to recognize and parse the emails. (Mutt + gpg, in particular.)</p>
-<p>For figuring out where your disk space went, try the visual <a href="http://www.derlien.com/">Disk Inventory X</a>. Works great.</p>
-<h2>Backups</h2>
-<p>Of course, as of 10.5 <a href="http://www.apple.com/macosx/features/timemachine.html">Time Machine</a> is the hot ticket. Buy an external drive or <a href="http://www.apple.com/timecapsule/">TimeCapsule</a> and be done with it. Highly recommended.</p>
-<p>Another alternative is the free-but-must-register <a href="http://www.silverkeeper.com/">Silverkeeper</a> from LaCie. Scheduled backups, free, GUI, OS9 and OSX support, looks pretty good, works well.</p>
-<p>Many people swear by <a href="http://www.dantz.com/en/products/index.dtml">Dantz Retrospect</a>; I've not tried it.</p>
-<p>Apple also has a <a href="http://www.apple.com/downloads/macosx/apple/backup.html">free graphical backup program</a> that can write to firewire, CD/DVD, iDisk, and also has scheduling capability. However, if you don't have a .Mac membership, it's crippled to only writing to .Mac. Which kind of sucks.</p>
-<p>If you have the Serious Mojo, you can <a href="http://www.tnpi.biz/computing/mac/tips/idisk/idisk-v2.shtml">create your own dot-mac replacement</a> and use Apple Backup with it. I've not yet tried this, but its a nice hack.</p>
-<p>For partial backups and true bidirectional sync, <a href="http://www.cis.upenn.edu/~bcpierce/unison/">Unison</a> is pretty amazing. Cross-platform, free, fast, and hard as hell to configure. I spent the time, based on the recommendation of <a href="http://cr.yp.to/">a friend of mine</a>, and it's excellent. I sync my desktop, bookmarks, calendars, addressbook and some reference data folders twice a day with my desktop, and its enabled me to leave the laptop at home. Well worth the effort.</p>
-<h3>Hardware</h3>
-<p>Sooner or later you'll want to replace/upgrade a hard drive, battery or such. Head to <a href="http://ifixit.com/">iFixit</a> for a comprehensive set of visual do-it-yourself tutorials.</p>
-<p>Books</p>
-<p>O'Reilly has <a href="http://mac.oreilly.com/">many excellent books </a>you'll want; I am particularly fond of <a href="http://www.oreilly.com/catalog/mosxgeeks/">Mac OS X for Unix Geeks.</a> <a href="http://www.oreilly.com/catalog/macosxmm/">Mac OSX: The Missing Manual</a> is an excellent overall intro, with pointers to in-depth resources. A good place to start.</p>
-<h2>Carrying cases</h2>
-<p>I've hesitated to add this section, as bags tend to be a religous topic for people. On the other hand, I'd like to advocate what I like.</p>
-<p>I've had several bags over the past few years, starting with a basic attache-style laptop bag from Lands' End. It worked fine for my Thinkpad, but is a little too small to carry the 15" powerbook. Also, the padding is minimal. Other than that, a decent bag, nicely unobtrusive.</p>
-<p>Next I went to a <a href="http://www.targus.com/us/product_details.asp?sku=TSB315">Targus sport deluxe backpack.</a> It works pretty well for carrying lots of stuff, and excels at heavy loads. Things that annoyed me enough to switch:</p>
+<p>An <a href="http://www.worth.com/Editorial/Money-Meaning/Passion-Investments/Watches-Jewelry/Watches-The-Value-of-Time-Print.asp">interesting editorial on Worth.com</a> about watches. More oriented towards collectors and such, but has some interesting bits.</p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[Client mode on Linksys WRT54GS]]></title>
+    <link href="http://fnord.phfactor.net/2005/12/11/Client-mode-on-Linksys-WRT54GS.html"/>
+    <updated>2014-07-31T18:51:48+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/12/11/Client-mode-on-Linksys-WRT54GS.html</id>
+    <content type="html"><![CDATA[<p>I have a <a href="http://slimdevices.com/">Squeezebox v1</a></p>
+<p><img src="http://www.phfactor.net/wp-pics/slim_devices_squeezebox.png" alt="" /></p>
+<p>for some months now, setup to play music streamed from my Mac mini. It (the squeezebox) has been flaky ever since I got it, where it'd simply lose the connection after a while and have to be power-cycled to recover.</p>
+<p>Somewhere between annoying and unusable, actually.</p>
+<p>So today, based on an idea, I took a WRT54GS, <a href="http://tonesnotes.org/2005/05/01/configuring-linksys-wrt54g-wireless">set it as a client to my main wireless router</a>, and plugged the squeezebox into the linksys.</p>
+<p>End result: Using the wired connection on the squeezebox seems more reliable than the wireless side. Odd, that.</p>
+<p>Still messing with other variables, such as whether or not I leave itunes running. Now that I have podcasts to fetch, that's more of a necessity. However, it seems like the re-scans of the itunes library may cause playback glitches.</p>
+<p>UPDATE Dec 16/05 - yep, using the bridge seems to fix the flakiness. Looks like the wireless part is just flaky.</p>
+<p>UPDATE 5/07: Changing base stations to an Apple Airport Express also fixed the problem. I had to return the Linksys anyway, as it was a loaner. Stable now for several months.</p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[Free google local client.]]></title>
+    <link href="http://fnord.phfactor.net/2005/12/08/Free-google-local-client.html"/>
+    <updated>2014-07-31T17:27:14+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/12/08/Free-google-local-client.html</id>
+    <content type="html"><![CDATA[<p><a href="http://www.bblocal.com/">bbLocal</a> is a full client for Google Local.</p>
+<p>Seems good. OTA at mobile.bblocal.com. Trying it now!</p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[What is it with men and their watches?]]></title>
+    <link href="http://fnord.phfactor.net/2005/12/06/What-is-it-with-men-and-their-watches.html"/>
+    <updated>2014-07-31T17:28:15+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/12/06/What-is-it-with-men-and-their-watches.html</id>
+    <content type="html"><![CDATA[<p><a href="http://www.guardian.co.uk/g2/story/0,,1654848,00.html">...is the title of this Guardian article</a>. Not many conclusions, but worth a read. I agree with the author that our <a href="http://www.phfactor.net/wp/?p=7">relationship with our watches</a> has gotten more complicated.</p>
+<p>S/he also hits the 'watches as jewelry' point that I mentioned.</p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[Watches for flying]]></title>
+    <link href="http://fnord.phfactor.net/2005/12/03/Watches-for-flying.html"/>
+    <updated>2014-07-31T17:27:03+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/12/03/Watches-for-flying.html</id>
+    <content type="html"><![CDATA[<p>I'm close to finishing my quest for a private pilot's license, and am still looking for a good watch to wear.</p>
+<p>From personal preference, I want to have</p>
+<pre><code></code></pre>
 <ol>
-<li><p>Dangling straps. Lots of them.</p>
+<li><p>GMT/UTC time for weather and such</p>
 </li>
-<li><p>Main fastener broke in short order, so the flap was held only by gravity.</p>
+<li><p>Timers, preferably two or more</p>
 </li>
-<li><p>Main pack is split in two, so you can't carry large items.</p>
+<li><p>Countdown timers, for things like fuel changes</p>
 </li>
-<li><p>A bit large. Doesn't travel well, especially under airline seats.</p>
+<li><p>Readability, under widely varying light and also with polarized sunglasses</p>
 </li>
 </ol>
-<p>After that, I got a nice leather briefcase in Brazil. Super-classy, good fit, decent padding. However, it just doesn't hold enough to be useful; I save it for occasions when I need to look good.</p>
-<h3>Timbuktu!</h3>
-<p><img src="http://www.phfactor.net/wp-pics/obssob.jpg" alt="" /></p>
-<p>I then bought a <a href="http://www.timbuk2.com/tb2/catalog/categories.t2?categoryId=7">Timbuk2 Commute bag</a> at the Apple store downtown. I actually saw it one day, went home and researched it, and went back the next day to buy it. It rocks. It's by far the nicest and best-made bag I've ever had. Just enough volume, lots of pockets and niches, most excellent padding, waterproof to boot, and super comfortable. Highly recommended.</p>
-<p>Update August 2006: According to the <a href="http://arstechnica.com/reviews/hardware/macbookpro.ars/2">Ars Technica review</a>, the MBP 15" won't <em>quite</em> fit in the Commute bag. Damn.</p>
-<p>Update Dec 2006: The Macbookpro fits quite well in the Timbuktu. I've now traveled twice with it, no problem, recommended.</p>
-<p>Update Dec 2006:</p>
-<p><a href="http://www.kk.org/cooltools/archives/001494.php">![](http://www.phfactor.net/wp-pics/bbp1sm.jpg)</a></p>
-<p>The <a href="http://www.kk.org/cooltools/archives/001494.php">Bum Backpack Messenger bag</a> gets a strong recommend from Cool Tools. Haven't tried it personally, but looks good.</p>
-<h3>...and back to REI again</h3>
-<p>As of October 2004, my commute has changed - I now have a 30-minute walk to the bus stop, and the reverse coming home. Also, I'm now using <a href="http://www.cis.upenn.edu/~bcpierce/unison/">Unison</a> to sync the powerbook with the desktop, so I don't need to pack the powerbook along. In this situation, the Timbuktu doesn't work very well, and I've gotten a nice <a href="http://www.rei.com/online/store/ProductDisplay?storeId=8000&amp;catalogId=40000008000&amp;productId=47928395&amp;parent_category_rn=4501697">REI backpack</a>. No computer sleeve, but good for carrying everything else. Might try it on my next trip to SD West.</p>
-<p>Update Aug 2006: The REI bag continues to work pretty well for the daily walking commute, but its a bit suboptimal for airlines. The Timbuktu is still preferred for that.</p>
-<p>For a complete list of bags that will fit the powerbooks, please see <a href="http://forums.macnn.com/showthread.php?t=178702">this page on MacNN.</a> This list has 'em all!</p>
-<h3>... and back to Timbuktu Yet Again!</h3>
-<p>Wow, soap opera, eh? What can I say, I'm picky. Current choice for the past year or so is<a href="http://www.amazon.com/Timbuk2-Track-Laptop-Backpack-strap/dp/B000JZ4VZG/ref=sr_1_10?ie=UTF8&amp;s=apparel&amp;qid=1211321686&amp;sr=1-10"> this Timbuktu backpack</a>:</p>
-<p><a href="http://fnord.phfactor.net/wp-content/uploads/2008/05/ttrack.jpg">![](http://fnord.phfactor.net/wp-content/uploads/2008/05/ttrack.jpg)</a>It's better for the long walks I have to and from the bus now, and has been excellent. Doesn't hold a lot, but that's just fine.</p>
-<h2>External keyboards and mice</h2>
-<p>I love the <a href="http://www.dansdata.com/clickykeyboards.htm">old-school IBM keyboards</a>, despite the noise. You can now get the same thing for Mac with the <a href="http://matias.ca/tactilepro/index.php">Matias TactilePro.</a> I've had one for several months and love it. Noisy, but who cares?</p>
-<p>For mice, get whatever multibutton type suits. I like Logitech and MS more or less equally. At least two buttons, and scroll wheel is nice too.</p>
-<h2>Other Notes for Unix people</h2>
-<p>A neat trick at the command line - use the</p>
-<pre><code>open
-</code></pre>
-<p>command to simulate a double-click in the Finder. So you can 'open .' to get a new finder window of the current directory, or 'open *.doc' and so forth. Very useful.</p>
-<p>Use</p>
-<pre><code> alias ssh ssh -AXY
-</code></pre>
-<p>That forwards agent connections and X11, and fixes a broken-ness with X and SSH that otherwise shows up in programs like xdvi.</p>
-<h3><strong>Other References</strong></h3>
-<p><a href="http://www.faisal.com/docs/osxforgeeks.html">This page on Faisal</a> is an excellent introduction to the Mac for Unix geeks. Worth a read.</p>
+<p>As noted in my dive watch review, the Seiko fulfills #3, but that's about it. <a href="http://www.phfactor.net/wp/?p=32">The Orient and Omega</a> both do the job, or close to it. There's also the approach of <a href="http://www.phfactor.net/wp/?p=8">a dive watch with a GMT hand</a>, which provides 1,3 and part of 2.</p>
+<p>However, you have to keep in mind that a fancy watch is really unnecesary. As with <a href="http://www.phfactor.net/wp/?p=7">dive watches</a>, the <em>need</em> for an elaborate flight watch with E6B slide rule and many dials is long gone. Flight watches now serve as affectations, wish fulfillment, jewelry or (rarely) functionality.</p>
+<p>From Salon's <a href="http://archive.salon.com/tech/col/smith/2002/10/11/askthepilot14/index1.html">"Ask the Pilot"</a>:</p>
+<blockquote>
+<p>What is the purpose of the complicated watches I always see pilots wearing?</p>
+</blockquote>
+<p>Their purpose is this: to tell them what time it is. Many pilots feel these gaudy little devices are an essential part of their uniform, perhaps a tribute to the days when goggled aviators used their watches to … I don't know. For a number of years I owned a Mickey Mouse watch as a kind of quietly irreverent protest to this practice (it also was the only kind I could afford). My red-bezeled Swiss Army watch also does the job wonderfully. Watches are required as backups to the ship's clocks, but nothing more elaborate than a sweep hand is needed.</p>
+<p>(Of course, he's flying an airliner with more compute power and instruments than I'll ever have. My last Archer had the 'classic six' plus GPS and a stick-on stopwatch.)</p>
+<p>Or, as <a href="http://philip.greenspun.com/flying/shopping">Philip Greenspun puts it</a>:</p>
+<blockquote>
+<p>Q: What do you get when you cross an ape with a pilot?
+A: An ape with a big watch.</p>
+</blockquote>
+<p>He goes on to advocate simple and readable, which I agree with. Taken to an extreme, you can get watches from <a href="http://www.bellross.com/bellross.php">Bell &amp; Ross</a> which are styled to look like flight instruments:</p>
+<p><img src="http://www.phfactor.net/pics/watches/bell-ross.jpg" alt="" /></p>
+<p>Nice. A pity they cost thousands of dollars, though. And don't have GMT. Or timers. Or alarms. Just the looks, ma'am.</p>
+<p>I also flew with a Timex for a while:</p>
+<p>[</p>
+<p><img src="http://www.phfactor.net/pics/watches/b17.jpg" alt="" /></p>
+<p>](http://www.sportys.com/acb/showdetl.cfm?DID=19&amp;Product_ID=6505&amp;CATID=173)
+(You can also get different WW2 plane logos instead of the B17 - <a href="http://www.sportys.com/acb/showprod.cfm?&amp;DID=19&amp;CATID=173&amp;ObjectGroup_ID=1253">see this page of listings</a>)</p>
+<p>This is actually an OEM Timex Expedition, for $65. It's readable as heck, has a backlight for both analog and digital, and can keep track of two timezones. (E.g., GMT). The curve of the digital impairs legibility a bit, but it's pretty damn good.</p>
+<p>These days, the only need for a <em>complicated</em> watch is if you lose instruments, have an ancient plane (e.g. Piper Cub) or demand to Look Like a Pilot. Once again, watches are jewelry. Pick one that's readable, functional and cheap. If you're flying, you need the money for airtime anyway.</p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[Breitling and analog-digital]]></title>
+    <link href="http://fnord.phfactor.net/2005/12/03/Breitling-and-analog-digital.html"/>
+    <updated>2014-07-31T17:28:27+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/12/03/Breitling-and-analog-digital.html</id>
+    <content type="html"><![CDATA[<p>For a long time I've lusted after a Breitling B-1 watch:</p>
+<p><a href="http://www.breitling.com/en/models/professional/b_1/">![](http://www.phfactor.net/pics/watches/b1.jpg)</a>
+(Link goes to the Breitling site)(<a href="http://forums.timezone.com/index.php?t=tree&amp;goto=2234&amp;rid=0">TimeZone review is here.</a>)It's a nice analog-digital combo, but vastly overpriced at 3,000USD or so. Hard to justify unless 'readable with night vision goggles' is a must-have for you.So that's right out. That's just waaaay too much money for an (admittedly nice) quartz watch. Here are some of the alternatives I've found so far:</p>
+<p><a href="http://www.timex.com/bin/detail.tmx?item=048148563810">![](http://www.phfactor.net/pics/watches/image.tmx.jpg)</a>This is a Timex, which I've seen in person - reasonably nice, super cheap ($70 list!) and you can turn off the digital for a cleaner appearance. Timex has never had the austere simplicity of a Seiko, but it ain't bad and the price is right.Then there's the Orient CVZ00002J: 
+<a href="http://www.network54.com/Forum/78440/thread/1133550200/Sold+the+black+Orient+ana-digi+a+while+back.+Missed+it%2C+so+I+bought+the+aqua+blue.+PIC">![](http://www.phfactor.net/pics/watches/orient.jpg)</a>Much better. More readable face, good luminosity, better hands, very readable. 100 to 150USD. (<a href="http://www.roachman.com/orient/quartz/CVZ00001.html">Roachman has it for sale.</a>; you can also find it for about 100 on ebay) Does not have a backlight for the digital portion, alas. (See the comments for Hari's nice take on this as well!)Note that, on ebay, one seller lists this as model 'CVZ00002J0'. I'm unsure which is correct.The image above is a <a href="http://www.network54.com/Forum/78440/thread/1133550200/Sold+the+black+Orient+ana-digi+a+while+back.+Missed+it%2C+so+I+bought+the+aqua+blue.+PIC">link to this review.</a></p>
+<p>On that review thread, someone mentions that Citizen now has something similar, the Citizen Wingman VI. Now, I have a Citizen flight watch, the Navihawk Blue Angels:</p>
+<p><img src="http://www.phfactor.net/pics/watches/JN0040-58L.jpg" alt="" />
+It's nice, and was the apple of my eye for a couple of years, but it has some annoying limitations - there's no backlight and no lume, you can't read it at night! However, the new Eco-drive version does. After searching for a while, I found two models of it: 
+<a href="http://www.watches88.com//pd_citizen_promaster_wingman.cfm">![](http://www.phfactor.net/pics/watches/citizen-1.jpg)</a><a href="http://www.watches88.com//pd_citizen_promaster_military_air_jq814051m.cfm">![](http://www.phfactor.net/pics/watches/citizen-2.jpg)</a>
+(Images are links to the reseller I found, about 300USD each)Not bad. It has a backlight now, though the hands are a bit thin and the face is still harder to read than I'd like. Still and all, getting better. (See Hari's comment - he likes his quite a lot)Then there's the Omega X-33:</p>
+<p><img src="http://www.phfactor.net/pics/watches/x-33-gen1.jpg" alt="" />
+<a href="http://www.omegawatches.com/index.php?id=297">![](http://www.phfactor.net/pics/watches/omegax33.jpg)</a>
+(<a href="http://www.timezone.com/library/comarticles/comarticles631681530107424115">TimeZone review here.</a>)Solves all the problems, has multiple timers (very nice for things like flight time, time per tank, leg time, etc) and an alarm loud enough to be heard while flying. Even has a backlight!Too bad it costs, erp, <strong>2600 USD</strong>. Well, so much for <strong>that</strong> idea.</p>
+<h3>Conclusions</h3>
+<p>If you've got the cash, get the Omega. The Citizen is well priced, usable and just not quite right. I'd probably lean towards the Orient for close-enough and cheapness.</p>
+<p>And I really like the Orient in blue. Very nice aesthetics.</p>
+<h3>Page update log</h3>
+<pre><code></code></pre>
+<ul>
+<li><p><strong>Updated</strong> 12/9/05: Orient model number, few cosmetic edits.</p>
+</li>
+<li><p><strong>Updated</strong> 5/27/07: Good comments from Hari, note also <a href="http://www.phfactor.net/wp/2006/08/30/another-x-33-alternative/">this post</a> and <a href="http://www.phfactor.net/wp/2006/07/16/yes-i-need-help/">this one</a> and <a href="http://www.phfactor.net/wp/2006/05/16/orient-analog-digital-review/">my review of the Orient</a> for followups and alternatives. Oh yeah, <a href="http://www.phfactor.net/wp/2006/05/16/omega-and-analog-digital/">and this page on a different Omega.</a> I <strong>do</strong> seem to have A Thing for analog-digital, eh?</p>
+</li>
+<li><p><strong>Updated</strong> 10/11/07: <a href="http://www.phfactor.net/wp/2007/10/11/more-on-the-omega-x-33/">More X-33 info and updates</a></p>
+</li>
+</ul>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[Added Google analytics to the site]]></title>
+    <link href="http://fnord.phfactor.net/2005/12/03/Added-Google-analytics-to-the-site.html"/>
+    <updated>2014-07-31T17:26:40+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/12/03/Added-Google-analytics-to-the-site.html</id>
+    <content type="html"><![CDATA[<p>I've now added <a href="http://www.google.com/analytics/">Google analytics</a> to the site, meaning that the header for the blog now has 2 Google javascript links. If this bothers you, please contact me and/or block contacts to www.google-analytics.com.</p>
+<p>I don't think it's a problem - the data is anonymous, and the information is tremendously interesting to me. I'll be posting snapshots here once some accumulate.</p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[Blackberry categories blow chunks.]]></title>
+    <link href="http://fnord.phfactor.net/2005/11/30/Blackberry-categories-blow-chunks.html"/>
+    <updated>2014-07-31T17:28:52+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/11/30/Blackberry-categories-blow-chunks.html</id>
+    <content type="html"><![CDATA[<p>In the <a href="http://www.phfactor.net/bb/bundled_apps.html">main apps review page</a> I said that the OS4 apps had category support. True, they do. However, after using it for quite I while, I have to say that they blow compared to PalmOS.</p>
+<p>Much harder to find/use/create. One of the virtues of the palm was the easy of switching categories, and the blackberry lacks this. They're effectively useless.</p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[Apple broadband tuner]]></title>
+    <link href="http://fnord.phfactor.net/2005/11/30/Apple-broadband-tuner.html"/>
+    <updated>2014-07-31T17:26:33+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/11/30/Apple-broadband-tuner.html</id>
+    <content type="html"><![CDATA[<p>I know this has been posted to every Apple blog on the net, but in case you missed it already: Apple has released a small app that sets the TCP window parameters higher.</p>
+<p>Or, in plain English, it makes broadband connections faster.</p>
+<p><a href="http://www.apple.com/support/downloads/broadbandtuner10.html">It's free. It's small. You can uninstall it.</a></p>
+<p>I've installed it, but need to test and see what the results are. From results like this you can see that TCP windows are critical:</p>
+<p><a href="http://www.psc.edu/networking/projects/hpn-ssh/">![](http://www.phfactor.net/pics/weblog/bdp-v-ssh-win.jpg)</a></p>
+<p>(Image borrowed from <a href="http://www.psc.edu/networking/projects/hpn-ssh/">http://www.psc.edu/networking/projects/hpn-ssh/</a>)</p>
+<p>Gotta love Apple sometimes.</p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[A complete catalog of all the Seiko divers]]></title>
+    <link href="http://fnord.phfactor.net/2005/11/29/A-complete-catalog-of-all-the-Seiko-divers.html"/>
+    <updated>2014-07-31T17:29:02+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/11/29/A-complete-catalog-of-all-the-Seiko-divers.html</id>
+    <content type="html"><![CDATA[<p><a href="http://orientalwatchsite.com/forum/viewtopic.php?t=1091">Lots and lots of pictures.</a></p>
+<p>Personally, I think the Samurai, marinemaster and (of course) SBDB001 are the nicest looking.</p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[How a watch works - film from Hamilton in 1949]]></title>
+    <link href="http://fnord.phfactor.net/2005/11/27/How-a-watch-works-film-from-Hamilton-in-1949.html"/>
+    <updated>2014-07-31T17:26:10+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/11/27/How-a-watch-works-film-from-Hamilton-in-1949.html</id>
+    <content type="html"><![CDATA[<p>This is very cool. Archive.org has public-domain film from the legendary Hamilton company, an introductory film on "How a Watch Works." Black and white, download or streamable.</p>
+<p>Very cool.</p>
+<p><a href="http://www.archive.org/details/HowaWatc1949">http://www.archive.org/details/HowaWatc1949</a></p>
+<p>Also on the same site, another Hamilton film on 'What makes a fine watch fine' -
+<a href="http://www.archive.org/details/WhatMake1947">http://www.archive.org/details/WhatMake1947</a></p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[Test post for email notification]]></title>
+    <link href="http://fnord.phfactor.net/2005/11/25/Test-post-for-email-notification.html"/>
+    <updated>2014-07-31T17:22:49+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/11/25/Test-post-for-email-notification.html</id>
+    <content type="html"><![CDATA[<p>Hmm, missed the oh-so-subtle 'notify subscribers' dropdown it added. Hmm.</p>
+<p>UPDATE: Notify is now the default. Cool.</p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[I really want a silent PC so I can run OpenBSD and pf again]]></title>
+    <link href="http://fnord.phfactor.net/2005/11/25/I-really-want-a-silent-PC-so-I-can-run-OpenBSD-and-pf-again.html"/>
+    <updated>2014-07-31T17:23:05+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/11/25/I-really-want-a-silent-PC-so-I-can-run-OpenBSD-and-pf-again.html</id>
+    <content type="html"><![CDATA[<p><a href="http://205.147.44.194/catalog/product_info.php?products_id=153&amp;osCsid=b44eeb2a32cebf459d424a8c7418bcc1">Preferably one of these</a>. $400, silent, 1U, with Compact Flash for hard drives. It'd make a killer box for OpenBSD. I really miss having pf and level-2 firewalling in place.</p>
+<p>Nice for VoIP, too, since <a href="http://slacker.com/~nugget/asterisk4.php">you can use pf/altq</a> to prioritize your VoIP traffic as well. Cool.</p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[SRV records for Asterisk]]></title>
+    <link href="http://fnord.phfactor.net/2005/11/25/SRV-records-for-Asterisk.html"/>
+    <updated>2014-07-31T17:26:00+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/11/25/SRV-records-for-Asterisk.html</id>
+    <content type="html"><![CDATA[<p>I just added SIP and IAX2 records for phfactor.net to UltraDNS, so in <em>theory</em> you can SIP-dial pfh at phfactor.net and it'll work... </p>
+<p>Got the idea from <a href="http://slacker.com/~nugget/asterisk2.php">slacker</a>, and found the details on <a href="http://www.voip-info.org/wiki-DNS+SRV">the wonderful VoIP wiki.</a></p>
+<p>Looks like we'll convert over to Broadvoice VoIP for all phone - been using their BYOB $6/month plan and a cheap Grandstream 102 with good results. Noticed that Wired Test top-rated them (Broadvoice, that is) and am now shopping for a good Wi-Fi VoIP phone, suggestions welcome!</p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[Email subscriptions now possible.]]></title>
+    <link href="http://fnord.phfactor.net/2005/11/23/Email-subscriptions-now-possible.html"/>
+    <updated>2014-07-31T17:25:51+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/11/23/Email-subscriptions-now-possible.html</id>
+    <content type="html"><![CDATA[<p>I’ve added the <a href="http://watershedstudio.com/portfolio/software/wp-email-notification.html">wordpress email plugin</a> (on the sidebar), so you can sign up for an email every time a post is added. If you’re not using RSS yet, then this might be very useful. Enjoy!</p>
+<p><strong>UPDATE:</strong> It's still broken.</p>
+<p><strong>UPDATE:</strong> Fixed! Try it.</p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[Opera Mini update]]></title>
+    <link href="http://fnord.phfactor.net/2005/11/15/Opera-Mini-update.html"/>
+    <updated>2014-07-31T17:50:38+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/11/15/Opera-Mini-update.html</id>
+    <content type="html"><![CDATA[<p>So the full error I get is 
+907 Invalid JAR
+HTTP Error 406: Not acceptable.</p>
+<p>Odd. The http://mini.opera.com/mnt tester is OK, so this may be an OS4 issue.</p>
+]]></content>
+  </entry>
+<entry>
+    <title type="html"><![CDATA[Nice two-page list of OSS mac software]]></title>
+    <link href="http://fnord.phfactor.net/2005/11/15/Nice-two-page-list-of-OSS-mac-software.html"/>
+    <updated>2014-07-31T17:25:42+00:00</updated>
+    <id>http://fnord.phfactor.net/2005/11/15/Nice-two-page-list-of-OSS-mac-software.html</id>
+    <content type="html"><![CDATA[<p><a href="http://www.opensourcemac.org/">OpenSourceMac</a>, a nice list of OSS software. I found some stuff I hadn't seen before, and the page layout is much better than mine. </p>
 ]]></content>
   </entry>
 
