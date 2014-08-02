@@ -15,11 +15,11 @@
   <entry>
     <title type="html"><![CDATA[Image links]]></title>
     <link href="http://fnord.phfactor.net/2014/08/01/Image-links.html"/>
-    <updated>2014-08-01T17:45:26+00:00</updated>
+    <updated>2014-08-02T23:15:54+00:00</updated>
     <id>http://fnord.phfactor.net/2014/08/01/Image-links.html</id>
-    <content type="html"><![CDATA[<p>You think it'd be easy: Post an image that links somewhere. It's <a href="http://meta.stackexchange.com/questions/2133/whats-the-recommended-syntax-for-an-image-with-a-link">not</a></p>
-<p>Not sure where the bug is.</p>
-<p><a href="http://www.phfactor.net">![Orient watch](http://www.phfactor.net/pics/watches/orient.jpg)</a></p>
+    <content type="html"><![CDATA[<p>You think it'd be easy: Post an image that links somewhere. It's <a href="http://meta.stackexchange.com/questions/2133/whats-the-recommended-syntax-for-an-image-with-a-link">not.</a></p>
+<p>Not sure where the bug is. Pardon me while I poke and experiment here.</p>
+<p><a href="http://www.phfactor.net"> ![Orient watch](http://www.phfactor.net/pics/watches/orient.jpg) </a></p>
 ]]></content>
   </entry>
 <entry>
