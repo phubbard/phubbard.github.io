@@ -15,7 +15,7 @@
   <entry>
     <title type="html"><![CDATA[Image links]]></title>
     <link href="http://fnord.phfactor.net/2014/08/01/Image-links.html"/>
-    <updated>2014-08-02T23:33:59+00:00</updated>
+    <updated>2014-08-02T23:50:30+00:00</updated>
     <id>http://fnord.phfactor.net/2014/08/01/Image-links.html</id>
     <content type="html"><![CDATA[<p>You think it'd be easy: Post an image that links somewhere. It's <a href="http://meta.stackexchange.com/questions/2133/whats-the-recommended-syntax-for-an-image-with-a-link">not.</a></p>
 <p>Not sure where the bug is. Pardon me while I poke and experiment here:</p>
@@ -31,7 +31,7 @@ nested syntax. Yet.</p>
 <entry>
     <title type="html"><![CDATA[Welcome to Fnord, Statiked version]]></title>
     <link href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html"/>
-    <updated>2014-08-01T15:55:50+00:00</updated>
+    <updated>2014-08-02T23:50:50+00:00</updated>
     <id>http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html</id>
     <content type="html"><![CDATA[<p>The blog platform and server are now both changed - I've been using Octopress and self-hosting, but the
 Rake-based workflow was painful and slow, and while I don't regret funding the Ghost project they still haven't had
