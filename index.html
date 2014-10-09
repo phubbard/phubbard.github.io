@@ -165,86 +165,6 @@ nested syntax. Yet.</p>
                 	</div>    
       			</article>
 <article class="list clearfix">
-          			<h3><a href = "http://fnord.phfactor.net/2014/07/31/Gigabit-ethernet-what-you-need.html">Gigabit ethernet - what you need</a></h3>
-         			<span class="by">Posted on 31 Jul 2014.</span>
-        			<p><p>For several years, those of us with home networks have been running 10/100 mixed LANs, usually with switches here and there. Works well, cheap, reliable and easy to wire. Very few indeed have home gigabit; the adapters are cheap but switches have been very expensive.However, that's no longer the case.</p>
-<h2>Goals</h2>
-<p>Cheap, reliable, low-power, no cooling fans. Oh yeah, I want fast, too, so we need jumbo frames (9000 byte packets instead of 1500; makes a huge difference in performance) and a fully non-blocking switch.</p>
-<p>This is all on twisted pair, indoors, for home use.</p>
-<p>For my network, I need an 8 port switch; you may be able to get by with less.</p>
-<h2>Cut to the chase!</h2>
-<p>If you need 8 ports, the best option I've found is the <a href="http://www.amazon.com/exec/obidos/tg/detail/-/B0000AKA95/qid=1108072034/sr=8-1/ref=sr_8_xs_ap_i1_xgl23/102-3980408-2513710?v=glance&amp;s=electronics&amp;n=507846">SMC 8508T (Amazon, non-affiliate link)</a>. $100, jumbo frames, 15W power, no cooling fans, 16Gbit bisection bandwidth, decent blinky lights:</p>
-<p><img src="http://www.phfactor.net/smc8508t.jpg" alt="Product image" /></p>
-<p>If you can live with fewer ports, the otherwise-identical 5-port version is the <a href="http://www.amazon.com/exec/obidos/ASIN/B0000AKA94/qid%3D1108072400/sr%3D11-1/ref%3Dsr%5F11%5F1/102-3980408-2513710">SMC 8505T (Amazon again)</a> for $67:</p>
-<p><img src="http://www.phfactor.net/smc8505t.jpg" alt="Product image" /></p>
-<p>About the only disadvantage of either one is that they use a wall-wart power supply instead of an internal. On the plus side, the do come with both rubber feet and rack ears. These are both really nice little switches in my opinion.</p>
-<h2>Which network card should I buy?</h2>
-<p>For network cards, I like the <a href="http://www.zipzoomfly.com/jsp/ProductDetail.jsp?ProductCode=250045">3Com 996BT (ZipZoomFly)</a>, about $60 from various venders. The <a href="http://www.zipzoomfly.com/jsp/ProductDetail.jsp?ProductCode=251402">Intel Pro 1000/XT</a> (130, ZZF) is also supposed good and reasonably cheap. If you've got the cash, the best card is the <a href="http://froogle.google.com/froogle?q=syskonnect+9821&amp;btnG=Search+Froogle">SysKonnect SK9821 (Froogle, appx $100)</a>. To get good throughput, PCI-X or 66/64 is pretty much required. Otherwise, you'll get 2-3X faster than fast Ethernet at best.</p>
-<p>Given that the SysKonnect prices have fallen fast (they used to cost $500) I'd recommend the 9821. I ended up with 3C996's, since I bought them a while ago when SysKonnext cost 6X more. Note that the 996 is actually a Broadcom chip, and uses the Tigon 3 driver (tg3) in Linux.</p>
-<p>Many motherboards now have gigabit included on them as well. Bonus, that.</p>
-<h2>Read For Yourself</h2>
-<p>This page represents quite a bit of research for me, and I've just presented my conclusions. However, you don't have to take my word for it!</p>
-<p>Anthony Betz and Paul Gray at Iowa did an <a href="http://www.cs.uni.edu/%7Egray/gig-over-copper/gig-over-copper.html">excellent review of gigabit/copper cards</a> that is where my recommendations come from. Read and be enlightened.</p>
-<ul>
-<li><p>Anthony Betz and Paul Gray at Iowa did an <a href="http://www.cs.uni.edu/%7Egray/gig-over-copper/gig-over-copper.html">excellent review of gigabit/copper cards</a> that is where my recommendations come from. Read and be enlightened.</p>
-</li>
-<li><p>For more about jumbo frames, read <a href="http://www.small-tree.com/jumbo1.htm">this commercial page</a> and <a href="http://sd.wareonearth.com/%7Ephil/jumbo.html">this WAN-based page</a>. I'm not sure I buy the huge improvements they graph, but you'll get the idea.</p>
-</li>
-<li><p>If you want to know if a piece of hardware supports jumbo frames, dig into the tech specs. If it doesn't say jumbo frames are supported, assume they are not! This <a href="http://darkwing.uoregon.edu/%7Ejoe/jumbo-clean-gear.html">page at Oregon has a nice list of hardware</a> with and without jumbo support.</p>
-</li>
-</ul>
-<h2>Things To Watch Out For</h2>
-<ul>
-<li><p>It's pretty much impossible to tell online if a switch has cooling fans or not. Since most of them use the 40mm size, they make lots of noise and fail quickly. Google, or check it out in person. I've gotten a lot pickier about noise of late, so this was a showstopper for me.</p>
-</li>
-<li><p>Not all jumbo frames are created equal. Vendors have been know to call 82 extra bytes a jumbo. You want 9000 or better.</p>
-</li>
-<li><p>My Dell Optiplex GX280's came with an onboard Gig-E card, a Broadcom BCM95751. It uses the same driver as my 3C996, but can't do jumbo frames! I have the same machine under XP, and no jumbo there either. Hardware limitation.</p>
-</li>
-<li><p>Despite having gigabit on their laptops years before anyone else, Apple Powerbooks do not support jumbo frames.</p>
-</li>
-<li><p>No, this will not speed up your DSL connection.</p>
-</li>
-<li><p>If the first speed test you try is scp/sftp, you'll be disappointed. However, PSC has a 7-line patch to scp that speeds it <em>way</em> up. Like 10X faster. <a href="http://www.psc.edu/networking/projects/hpn-ssh/">Go and get it.</a></p>
-</li>
-</ul>
-<h2>So why bother?</h2>
-<ul>
-<li><p>High geek value.</p>
-</li>
-<li><p>It is faster, after all.</p>
-</li>
-<li><p>You can beat down anyone who complains about lag at your next LAN party.</p>
-</li>
-</ul>
-<p>Most importantly: The hardware is now down around the cost levels of slower 10/100 gear, so there's no reason to pay 10 bucks less on a switch when you can get gigabit.</p>
-<p>Go for it.</p>
-<p>Update 10/3/07: See <a href="http://fnord.phfactor.net/2007/10/04/more-cool-networking-gear/">this updated post</a> for a revised switch/router too.</p>
-</p>
-        
-        
-    				<div class="socialbar">
-                    <div class="clearfix"></div>
-	                    <ul>
-	                        <li>
-	                        <i class="icon-tag-1"></i>
-	                          <span>Networking, </span>
-<span>Recommendations</span>
-
-	                        </li>
-	                        <li><i class="icon-comment"></i> <span> 
-                                
-                                     </span></li>
-	                        <li class="push-right">
-	                            <a href="https://twitter.com/intent/tweet?text=http://fnord.phfactor.net/2014/07/31/Gigabit-ethernet-what-you-need.html" onclick="javascript:window.open(this.href,
-                                    '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="icon-twitter-circled"></i></a>
-                                
-                                
-	                        </li>
-	                    </ul>
-                	</div>    
-      			</article>
-<article class="list clearfix">
           			<h3><a href = "http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html">Welcome to Fnord, Statiked version</a></h3>
          			<span class="by">Posted on 30 Jul 2014.</span>
         			<p><p>The blog platform and server are now both changed - I've been using Octopress and self-hosting, but the
@@ -478,6 +398,71 @@ authentication I had enabled. Disable it and voila.</p>
 	                    </ul>
                 	</div>    
       			</article>
+<article class="list clearfix">
+          			<h3><a href = "http://fnord.phfactor.net/2005/12/03/Watches-for-flying.html">Watches for flying</a></h3>
+         			<span class="by">Posted on 03 Dec 2005.</span>
+        			<p><p>I'm close to finishing my quest for a private pilot's license, and am still looking for a good watch to wear.</p>
+<p>From personal preference, I want to have</p>
+<pre><code></code></pre>
+<ol>
+<li><p>GMT/UTC time for weather and such</p>
+</li>
+<li><p>Timers, preferably two or more</p>
+</li>
+<li><p>Countdown timers, for things like fuel changes</p>
+</li>
+<li><p>Readability, under widely varying light and also with polarized sunglasses</p>
+</li>
+</ol>
+<p>As noted in my dive watch review, the Seiko fulfills #3, but that's about it. <a href="http://fnord.phfactor.net/?p=32">The Orient and Omega</a> both do the job, or close to it. There's also the approach of <a href="http://fnord.phfactor.net/?p=8">a dive watch with a GMT hand</a>, which provides 1,3 and part of 2.</p>
+<p>However, you have to keep in mind that a fancy watch is really unnecesary. As with <a href="http://fnord.phfactor.net/?p=7">dive watches</a>, the <em>need</em> for an elaborate flight watch with E6B slide rule and many dials is long gone. Flight watches now serve as affectations, wish fulfillment, jewelry or (rarely) functionality.</p>
+<p>From Salon's <a href="http://archive.salon.com/tech/col/smith/2002/10/11/askthepilot14/index1.html">"Ask the Pilot"</a>:</p>
+<blockquote>
+<p>What is the purpose of the complicated watches I always see pilots wearing?</p>
+</blockquote>
+<blockquote>
+<p>Their purpose is this: to tell them what time it is. Many pilots feel these gaudy little devices are an essential part of their uniform, perhaps a tribute to the days when goggled aviators used their watches to … I don't know. For a number of years I owned a Mickey Mouse watch as a kind of quietly irreverent protest to this practice (it also was the only kind I could afford). My red-bezeled Swiss Army watch also does the job wonderfully. Watches are required as backups to the ship's clocks, but nothing more elaborate than a sweep hand is needed.</p>
+</blockquote>
+<p>(Of course, he's flying an airliner with more compute power and instruments than I'll ever have. My last Archer had the 'classic six' plus GPS and a stick-on stopwatch.)</p>
+<p>Or, as <a href="http://philip.greenspun.com/flying/shopping">Philip Greenspun puts it</a>:</p>
+<blockquote>
+<p>Q: What do you get when you cross an ape with a pilot?
+A: An ape with a big watch.</p>
+</blockquote>
+<p>He goes on to advocate simple and readable, which I agree with. Taken to an extreme, you can get watches from <a href="http://www.bellross.com/bellross.php">Bell &amp; Ross</a> which are styled to look like flight instruments:</p>
+<p><img src="http://www.phfactor.net/pics/watches/bell-ross.jpg" alt="B&amp;R" /></p>
+<p>Nice. A pity they cost thousands of dollars, though. And don't have GMT. Or timers. Or alarms. Just the looks, ma'am.</p>
+<p>I also flew with a Timex for a while:</p>
+<p><img src="http://www.phfactor.net/pics/watches/b17.jpg" alt="timex" /></p>
+<p>(<a href="http://www.sportys.com/acb/showdetl.cfm?DID=19&amp;Product_ID=6505&amp;CATID=173">This one</a>)
+ You can also get different WW2 plane logos instead of the B17 - <a href="http://www.sportys.com/acb/showprod.cfm?&amp;DID=19&amp;CATID=173&amp;ObjectGroup_ID=1253">see this page of listings</a>.</p>
+<p>This is actually an OEM Timex Expedition, for $65. It's readable as heck, has a backlight for both analog and digital, and can keep track of two timezones. (E.g., GMT). The curve of the digital impairs legibility a bit, but it's pretty damn good.</p>
+<p>These days, the only need for a <em>complicated</em> watch is if you lose instruments, have an ancient plane (e.g. Piper Cub) or demand to Look Like a Pilot. Once again, watches are jewelry. Pick one that's readable, functional and cheap. If you're flying, you need the money for airtime anyway.</p>
+</p>
+        
+        
+    				<div class="socialbar">
+                    <div class="clearfix"></div>
+	                    <ul>
+	                        <li>
+	                        <i class="icon-tag-1"></i>
+	                          <span>Aviation, </span>
+<span>Watches, </span>
+<span>Essays</span>
+
+	                        </li>
+	                        <li><i class="icon-comment"></i> <span> 
+                                
+                                     </span></li>
+	                        <li class="push-right">
+	                            <a href="https://twitter.com/intent/tweet?text=http://fnord.phfactor.net/2005/12/03/Watches-for-flying.html" onclick="javascript:window.open(this.href,
+                                    '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="icon-twitter-circled"></i></a>
+                                
+                                
+	                        </li>
+	                    </ul>
+                	</div>    
+      			</article>
 
 
 	      	<div class="socialbar">
@@ -513,7 +498,6 @@ authentication I had enabled. Disable it and voila.</p>
                 <ul>
                 <li><a href="http://fnord.phfactor.net/2014/10/09/Blog-tools-and-perils.html">Blog tools and perils</a></li>
 <li><a href="http://fnord.phfactor.net/2014/08/01/Image-links.html">Image links</a></li>
-<li><a href="http://fnord.phfactor.net/2014/07/31/Gigabit-ethernet-what-you-need.html">Gigabit ethernet - what you need</a></li>
 <li><a href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html">Welcome to Fnord, Statiked version</a></li>
 </ul>
                   </li>
@@ -555,6 +539,7 @@ authentication I had enabled. Disable it and voila.</p>
 <li><a href="http://fnord.phfactor.net/2005/10/28/CaffeineFinder-updated-to-1-0-3.html">CaffeineFinder updated to 1.0.3</a></li>
 <li><a href="http://fnord.phfactor.net/2005/10/11/A-new-affectation-strikes-our-hero.html">A new affectation strikes our hero.</a></li>
 <li><a href="http://fnord.phfactor.net/2005/10/11/Moved-to-sunny-California-Trite-eh.html">Moved to sunny California. Trite, eh?</a></li>
+<li><a href="http://fnord.phfactor.net/2005/06/13/Gigabit-ethernet-what-you-need.html">Gigabit ethernet - what you need</a></li>
 <li><a href="http://fnord.phfactor.net/2005/06/13/Macintosh-stuff-notes-and-recommendations.html">Macintosh stuff - notes and recommendations</a></li>
 <li><a href="http://fnord.phfactor.net/2005/06/13/WordPress-creation.html">WordPress creation</a></li>
 
@@ -586,24 +571,6 @@ authentication I had enabled. Disable it and voila.</p>
                   <li><a href="http://fnord.phfactor.net/2014/08/01/Image-links.html">Image links</a></li>
                 
 <li><a href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html">Welcome to Fnord, Statiked version</a></li>
-                </ul>
-                  </li>
-
-<li>
-                    <span class="icon-right-dir"><i>Networking</i></span>
-                  <ul>
-                  <li><a href="http://fnord.phfactor.net/2014/07/31/Gigabit-ethernet-what-you-need.html">Gigabit ethernet - what you need</a></li>
-                
-<li><a href="http://fnord.phfactor.net/2005/12/11/Client-mode-on-Linksys-WRT54GS.html">Client mode on Linksys WRT54GS</a></li>
-                
-<li><a href="http://fnord.phfactor.net/2005/11/30/Apple-broadband-tuner.html">Apple broadband tuner</a></li>
-                </ul>
-                  </li>
-
-<li>
-                    <span class="icon-right-dir"><i>Recommendations</i></span>
-                  <ul>
-                  <li><a href="http://fnord.phfactor.net/2014/07/31/Gigabit-ethernet-what-you-need.html">Gigabit ethernet - what you need</a></li>
                 </ul>
                   </li>
 
@@ -716,6 +683,17 @@ authentication I had enabled. Disable it and voila.</p>
                   </li>
 
 <li>
+                    <span class="icon-right-dir"><i>Networking</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/12/11/Client-mode-on-Linksys-WRT54GS.html">Client mode on Linksys WRT54GS</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/30/Apple-broadband-tuner.html">Apple broadband tuner</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/06/13/Gigabit-ethernet-what-you-need.html">Gigabit ethernet - what you need</a></li>
+                </ul>
+                  </li>
+
+<li>
                     <span class="icon-right-dir"><i>Blackberry</i></span>
                   <ul>
                   <li><a href="http://fnord.phfactor.net/2005/12/08/Free-google-local-client.html">Free google local client.</a></li>
@@ -792,6 +770,13 @@ authentication I had enabled. Disable it and voila.</p>
                     <span class="icon-right-dir"><i>Blackbery</i></span>
                   <ul>
                   <li><a href="http://fnord.phfactor.net/2005/10/28/CaffeineFinder-updated-to-1-0-3.html">CaffeineFinder updated to 1.0.3</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>Recommendations</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2005/06/13/Gigabit-ethernet-what-you-need.html">Gigabit ethernet - what you need</a></li>
                 </ul>
                   </li>
 
