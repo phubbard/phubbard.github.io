@@ -13,6 +13,22 @@
   <generator uri="http://www.statiked.com/">Statiked</generator>
 
   <entry>
+    <title type="html"><![CDATA[Blog tools and perils]]></title>
+    <link href="http://fnord.phfactor.net/2014/10/09/Blog-tools-and-perils.html"/>
+    <updated>2014-10-09T18:00:50+00:00</updated>
+    <id>http://fnord.phfactor.net/2014/10/09/Blog-tools-and-perils.html</id>
+    <content type="html"><![CDATA[<p>So I was initially thrilled with Statiked. Super-responsive developer, github hosting, nice GUI
+app, easy to post, all I need to do is copy over my folder of already-in-Markdown posts, right?</p>
+<p>No. Statiked is v1.0 and is an examplar of the agile idea of MVP, or minimum viable product. It works,
+it does the essentials and it's shipping. I've got a few hundred files, and that causes problems.</p>
+<p>Right now, I've got a couple of astonishingly baroque regular expressions to fix images, and some rules
+of thumb for Markdown flavors, but Statiked has a showstopping bug right now: If you try to generate 
+the site, if <em>a single file</em> fails to generate, it just stops. <strong>It doesn't tell you which file</strong>.</p>
+<p>So yeah, I have 2005 painfully imported, and 2006 mostly done, but other posts are gonna have to wait
+until that's fixed.</p>
+]]></content>
+  </entry>
+<entry>
     <title type="html"><![CDATA[Image links]]></title>
     <link href="http://fnord.phfactor.net/2014/08/01/Image-links.html"/>
     <updated>2014-08-03T21:19:57+00:00</updated>
@@ -348,16 +364,6 @@ A: An ape with a big watch.</p>
     <content type="html"><![CDATA[<p>I just added SIP and IAX2 records for phfactor.net to UltraDNS, so in <em>theory</em> you can SIP-dial pfh at phfactor.net and it'll work... </p>
 <p>Got the idea from <a href="http://slacker.com/~nugget/asterisk2.php">slacker</a>, and found the details on <a href="http://www.voip-info.org/wiki-DNS+SRV">the wonderful VoIP wiki.</a></p>
 <p>Looks like we'll convert over to Broadvoice VoIP for all phone - been using their BYOB $6/month plan and a cheap Grandstream 102 with good results. Noticed that Wired Test top-rated them (Broadvoice, that is) and am now shopping for a good Wi-Fi VoIP phone, suggestions welcome!</p>
-]]></content>
-  </entry>
-<entry>
-    <title type="html"><![CDATA[Email subscriptions now possible.]]></title>
-    <link href="http://fnord.phfactor.net/2005/11/23/Email-subscriptions-now-possible.html"/>
-    <updated>2014-07-31T17:25:51+00:00</updated>
-    <id>http://fnord.phfactor.net/2005/11/23/Email-subscriptions-now-possible.html</id>
-    <content type="html"><![CDATA[<p>I’ve added the <a href="http://watershedstudio.com/portfolio/software/wp-email-notification.html">wordpress email plugin</a> (on the sidebar), so you can sign up for an email every time a post is added. If you’re not using RSS yet, then this might be very useful. Enjoy!</p>
-<p><strong>UPDATE:</strong> It's still broken.</p>
-<p><strong>UPDATE:</strong> Fixed! Try it.</p>
 ]]></content>
   </entry>
 
