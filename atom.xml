@@ -15,7 +15,7 @@
   <entry>
     <title type="html"><![CDATA[Blog tools and perils]]></title>
     <link href="http://fnord.phfactor.net/2014/10/09/Blog-tools-and-perils.html"/>
-    <updated>2014-10-09T18:00:50+00:00</updated>
+    <updated>2014-10-09T18:05:35+00:00</updated>
     <id>http://fnord.phfactor.net/2014/10/09/Blog-tools-and-perils.html</id>
     <content type="html"><![CDATA[<p>So I was initially thrilled with Statiked. Super-responsive developer, github hosting, nice GUI
 app, easy to post, all I need to do is copy over my folder of already-in-Markdown posts, right?</p>
@@ -26,6 +26,7 @@ of thumb for Markdown flavors, but Statiked has a showstopping bug right now: If
 the site, if <em>a single file</em> fails to generate, it just stops. <strong>It doesn't tell you which file</strong>.</p>
 <p>So yeah, I have 2005 painfully imported, and 2006 mostly done, but other posts are gonna have to wait
 until that's fixed.</p>
+<p>It <strong>is</strong> nice to be able to write again, though.</p>
 ]]></content>
   </entry>
 <entry>
