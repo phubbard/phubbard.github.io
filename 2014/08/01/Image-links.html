@@ -88,13 +88,19 @@
 		 		<span class="by">Posted on 01 Aug 2014.</span>
 				<p><p>You think it'd be easy: Post an image that links somewhere. It's <a href="http://meta.stackexchange.com/questions/2133/whats-the-recommended-syntax-for-an-image-with-a-link">not.</a></p>
 <p>Not sure where the bug is. Pardon me while I poke and experiment here:</p>
-<p><a href="http://www.phfactor.net">![Orient watch](http://www.phfactor.net/pics/watches/orient.jpg)</a></p>
+<p><a href="http://www.phfactor.net"><img src="http://www.phfactor.net/pics/watches/orient.jpg" alt="Orient watch"></a></p>
 <p>Which works on <a href="http://www.markdownviewer.com">markdown viewer</a>. Talked to Statiked support and it 
 is a library problem, they use <a href="https://github.com/mdiep/MMMarkdown">MMMarkdown</a> and it doesn't support
 nested syntax. Yet.</p>
 <p>So I have to use inline HTML. Let's try that:</p>
 <p><a href="http://fnord.phfactor.net"><img src="http://www.phfactor.net/pics/watches/orient.jpg"></a></p>
 <p>OK, we have a workaround!</p>
+<p>This regex will find them:</p>
+<pre><code>\[\s*\!\[(.*?)\]\((.*?)\)\s*\]\((.*?)\)
+</code></pre>
+<p>and this will replace them, using the Komodo Edit v8 backslash syntax:</p>
+<pre><code>&lt;a href="\3"&gt;&lt;img src="\2" alt="\1"&gt;&lt;/a&gt;
+</code></pre>
 </p>
 		
 				<div class="socialbar">
@@ -145,6 +151,7 @@ nested syntax. Yet.</p>
                   <span class="icon-right-dir"><i>2014</i></span>
                 <ul>
                 <li><a href="http://fnord.phfactor.net/2014/08/01/Image-links.html">Image links</a></li>
+<li><a href="http://fnord.phfactor.net/2014/07/31/Gigabit-ethernet-what-you-need.html">Gigabit ethernet - what you need</a></li>
 <li><a href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html">Welcome to Fnord, Statiked version</a></li>
 </ul>
                   </li>
@@ -186,7 +193,6 @@ nested syntax. Yet.</p>
 <li><a href="http://fnord.phfactor.net/2005/10/28/CaffeineFinder-updated-to-1-0-3.html">CaffeineFinder updated to 1.0.3</a></li>
 <li><a href="http://fnord.phfactor.net/2005/10/11/A-new-affectation-strikes-our-hero.html">A new affectation strikes our hero.</a></li>
 <li><a href="http://fnord.phfactor.net/2005/10/11/Moved-to-sunny-California-Trite-eh.html">Moved to sunny California. Trite, eh?</a></li>
-<li><a href="http://fnord.phfactor.net/2005/06/13/Gigabit-ethernet-what-you-need.html">Gigabit ethernet - what you need</a></li>
 <li><a href="http://fnord.phfactor.net/2005/06/13/Macintosh-stuff-notes-and-recommendations.html">Macintosh stuff - notes and recommendations</a></li>
 <li><a href="http://fnord.phfactor.net/2005/06/13/WordPress-creation.html">WordPress creation</a></li>
 
@@ -211,6 +217,24 @@ nested syntax. Yet.</p>
                   <li><a href="http://fnord.phfactor.net/2014/08/01/Image-links.html">Image links</a></li>
                 
 <li><a href="http://fnord.phfactor.net/2014/07/30/Welcome-to-Fnord-Statiked-version.html">Welcome to Fnord, Statiked version</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>Networking</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2014/07/31/Gigabit-ethernet-what-you-need.html">Gigabit ethernet - what you need</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/12/11/Client-mode-on-Linksys-WRT54GS.html">Client mode on Linksys WRT54GS</a></li>
+                
+<li><a href="http://fnord.phfactor.net/2005/11/30/Apple-broadband-tuner.html">Apple broadband tuner</a></li>
+                </ul>
+                  </li>
+
+<li>
+                    <span class="icon-right-dir"><i>Recommendations</i></span>
+                  <ul>
+                  <li><a href="http://fnord.phfactor.net/2014/07/31/Gigabit-ethernet-what-you-need.html">Gigabit ethernet - what you need</a></li>
                 </ul>
                   </li>
 
@@ -319,15 +343,6 @@ nested syntax. Yet.</p>
                     <span class="icon-right-dir"><i>Music</i></span>
                   <ul>
                   <li><a href="http://fnord.phfactor.net/2005/12/11/Client-mode-on-Linksys-WRT54GS.html">Client mode on Linksys WRT54GS</a></li>
-                </ul>
-                  </li>
-
-<li>
-                    <span class="icon-right-dir"><i>Networking</i></span>
-                  <ul>
-                  <li><a href="http://fnord.phfactor.net/2005/12/11/Client-mode-on-Linksys-WRT54GS.html">Client mode on Linksys WRT54GS</a></li>
-                
-<li><a href="http://fnord.phfactor.net/2005/11/30/Apple-broadband-tuner.html">Apple broadband tuner</a></li>
                 </ul>
                   </li>
 
