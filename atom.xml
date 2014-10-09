@@ -13,6 +13,22 @@
   <generator uri="http://www.statiked.com/">Statiked</generator>
 
   <entry>
+    <title type="html"><![CDATA[A most excellent toy]]></title>
+    <link href="http://fnord.phfactor.net/2014/10/09/A-most-excellent-toy.html"/>
+    <updated>2014-10-09T18:14:36+00:00</updated>
+    <id>http://fnord.phfactor.net/2014/10/09/A-most-excellent-toy.html</id>
+    <content type="html"><![CDATA[<p><img src="https://www.phfactor.net/fnord-images/2014/10/copter.png" alt="quadcopter"></p>
+<p>It's <a href="http://www.amazon.com/gp/product/B00KYJET7M/ref=oh_aui_detailpage_o02_s00?ie=UTF8&amp;psc=1">$23 bucks on Amazon</a>. 
+It actually flies and is controllable. You can get spare parts for cheap, and it comes with 4 replacement props.</p>
+<p>Onboard battery lasts a few minutes, recharges via the USB cable, controller takes 2x AAA and seems happy
+with Eneloops. It's small enough to sit in your palm, so you're not going to hang a GoPro from it, but it
+flies and is stable enough with the trim to actually be fun.</p>
+<p>Took me a single flight to get the hang of it, and once I do a few more I can enable loops and flips in the 
+controller. Not a kid toy by any means, but a very well priced gadget for ex-pilots like myself.</p>
+<p>Recommended. </p>
+]]></content>
+  </entry>
+<entry>
     <title type="html"><![CDATA[Blog tools and perils]]></title>
     <link href="http://fnord.phfactor.net/2014/10/09/Blog-tools-and-perils.html"/>
     <updated>2014-10-09T18:05:35+00:00</updated>
@@ -305,16 +321,6 @@ A: An ape with a big watch.</p>
     <content type="html"><![CDATA[<p>I just added SIP and IAX2 records for phfactor.net to UltraDNS, so in <em>theory</em> you can SIP-dial pfh at phfactor.net and it'll work... </p>
 <p>Got the idea from <a href="http://slacker.com/~nugget/asterisk2.php">slacker</a>, and found the details on <a href="http://www.voip-info.org/wiki-DNS+SRV">the wonderful VoIP wiki.</a></p>
 <p>Looks like we'll convert over to Broadvoice VoIP for all phone - been using their BYOB $6/month plan and a cheap Grandstream 102 with good results. Noticed that Wired Test top-rated them (Broadvoice, that is) and am now shopping for a good Wi-Fi VoIP phone, suggestions welcome!</p>
-]]></content>
-  </entry>
-<entry>
-    <title type="html"><![CDATA[Email subscriptions now possible.]]></title>
-    <link href="http://fnord.phfactor.net/2005/11/23/Email-subscriptions-now-possible.html"/>
-    <updated>2014-07-31T17:25:51+00:00</updated>
-    <id>http://fnord.phfactor.net/2005/11/23/Email-subscriptions-now-possible.html</id>
-    <content type="html"><![CDATA[<p>I’ve added the <a href="http://watershedstudio.com/portfolio/software/wp-email-notification.html">wordpress email plugin</a> (on the sidebar), so you can sign up for an email every time a post is added. If you’re not using RSS yet, then this might be very useful. Enjoy!</p>
-<p><strong>UPDATE:</strong> It's still broken.</p>
-<p><strong>UPDATE:</strong> Fixed! Try it.</p>
 ]]></content>
   </entry>
 
